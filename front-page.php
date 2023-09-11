@@ -1,0 +1,70 @@
+ <?php
+    /**
+    * Template Name: Front Page
+    */
+
+get_header();
+
+// Retrieve ACF fields for the front page
+$play_title = get_field('play_title');
+$play_summary = get_field('play_summary');
+$competition_heading = get_field('competition_heading');
+$competition_question = get_field('competition_question');
+$ticket_purchase_heading = get_field('ticket_purchase_heading');
+$ticket_prices = get_field('ticket_prices');
+$ticket_purchase_instructions = get_field('ticket_purchase_instructions');
+$contact_information = get_field('contact_information');
+$social_media_links = get_field('social_media_links');
+?>
+
+<section class="main-banner">
+    <div class="container">
+        <div class="play-title">
+            <?php echo esc_html($play_title); ?>
+        </div>
+        <div class="play-summary">
+            <?php echo esc_html($play_summary); ?>
+        </div>
+        <a href="<?php echo esc_url(get_permalink(get_page_by_title('Tickets'))); ?>" class="cta-button">
+            Get Your Tickets Now
+        </a>
+    </div>
+</section>
+
+<section class="competition">
+    <div class="container">
+        <h2><?php echo esc_html($competition_heading); ?></h2>
+        <p><?php echo esc_html($competition_question); ?></p>
+        <form id="competition-form">
+            <input type="text" name="answer" placeholder="Your Answer" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</section>
+
+<section class="ticket-purchase">
+    <div class="container">
+        <h2><?php echo esc_html($ticket_purchase_heading); ?></h2>
+        <a href="<?php echo esc_url(get_permalink(get_page_by_title('Tickets'))); ?>" class="buy-tickets-button">
+            Buy Tickets
+        </a>
+        <div class="ticket-prices">
+            <?php echo wp_kses_post($ticket_prices); ?>
+        </div>
+        <p><?php echo esc_html($ticket_purchase_instructions); ?></p>
+    </div>
+</section>
+
+<section class="contact-information">
+    <div class="container">
+        <?php echo wp_kses_post($contact_information); ?>
+    </div>
+</section>
+
+<section class="social-media-links">
+    <div class="container">
+        <?php echo wp_kses_post($social_media_links); ?>
+    </div>
+</section>
+
+<?php get_footer();

@@ -5,12 +5,13 @@
         wp_enqueue_style("stylesheet");
     }
     add_action("wp_enqueue_scripts", "load_stylesheets");
-
-    // function ad_remove_gutenberg() {
-    //     remove_post_type_support( 'page', 'editor' );
-    //     remove_post_type_support( 'post', 'editor' );
-    //  }
-    //  add_action( 'init', 'ad_remove_gutenberg' );
+    add_theme_support('custom-page-template'); 
+    
+    function ad_remove_gutenberg() {
+        remove_post_type_support( 'page', 'editor' );
+        remove_post_type_support( 'post', 'editor' );
+     }
+     add_action( 'init', 'ad_remove_gutenberg' );
 
     
     
