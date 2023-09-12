@@ -19,6 +19,8 @@ $social_media_links = get_field('social_media_links');
 ?>
 
 <section class="main-banner">
+    <div class="first-cloud"></div>
+    <div class="second-cloud"></div>
     <div class="front-container">
         <div class="play-title">
             <h1><?php echo esc_html($play_title); ?></h1>
@@ -26,25 +28,17 @@ $social_media_links = get_field('social_media_links');
         <div class="play-summary">
             <p><?php echo esc_html($play_summary); ?></p>
         </div>
+     
         <a href="<?php echo esc_url(get_permalink(get_page_by_title('Tickets'))); ?>" class="cta-button">
             Get Your Tickets Now
         </a>
-    </div>
+    </div>   
+   
 </section>
 
 <div class="section-wrapper">
-    <section class="competition">
-        <div class="container">
-            <h2><?php echo esc_html($competition_heading); ?></h2>
-            <p><?php echo esc_html($competition_question); ?></p>
-            <form id="competition-form">
-                <input type="text" name="answer" placeholder="Your Answer" required>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-    </section>
 
-    <section class="ticket-purchase">
+<section class="ticket-purchase">
         <div class="container">
             <h2><?php echo esc_html($ticket_purchase_heading); ?></h2>
             <a href="<?php echo esc_url(get_permalink(get_page_by_title('Tickets'))); ?>" class="buy-tickets-button">
@@ -56,12 +50,34 @@ $social_media_links = get_field('social_media_links');
             <p><?php echo esc_html($ticket_purchase_instructions); ?></p>
         </div>
     </section>
+    
+    <section class="competition">
+        <div class="container">
+            <h2><?php echo esc_html($competition_heading); ?></h2>
+            <p><?php echo esc_html($competition_question); ?></p>
+            <form id="competition-form">
+                <input class="qinput" type="text" name="answer" placeholder="Your Answer" required>
+                <div class="item button-parrot">
+                    <button type="submit">Submit
+                        <div class="parrot"></div>
+                        <div class="parrot"></div>
+                        <div class="parrot"></div>
+                        <div class="parrot"></div>
+                        <div class="parrot"></div>
+                        <div class="parrot"></div>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+   
 
 </div>
 
 <div id="countdown-timer"></div>
 
-
+<div class="third-cloud"></div>
 
 <section class="contact-information">
     <div class="container">

@@ -1,6 +1,4 @@
 <?php
-var_dump(is_page_template('front-page.php')); // Debugging line
-var_dump(is_page_template('director-cast.php')); // Debugging line
 
 
 add_action('init', 'register_custom_styles');

@@ -3,8 +3,52 @@ Theme Name: Busters World
 Text Domain: bustersworld
 Author: Jonina, Yevhenii, Kian & Valeria
 */
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Dosis:wght@300&family=Mali:wght@700&family=Shadows+Into+Light&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Shadows+Into+Light&family=Yusei+Magic&display=swap');
+:root {
+    --background-color: #638EC7;
+    --border-color: #F27821;
+    --purple: #8869A8;
+}
+
+body{
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+   
+}
+.first-cloud {
+    background-image: url("images/first-cloud.png");
+    width: 100%;
+    height: 790px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: bottom ;
+    bottom: 5%;
+    z-index: -1;
+}
+.second-cloud {
+    background-image: url("images/second-cloud.png");
+    background-repeat: no-repeat;
+    background-position: bottom ;
+    width: 100%;
+    height: 920px;
+    position: fixed;
+    bottom: -10%;
+    z-index: 1;
+}
+.third-cloud {
+    background-image: url("images/third-cloud.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom 0%;
+    width: 100%;
+    height:600px;
+    position: fixed;
+    bottom: 10%;
+    z-index: -3;
+}
+
 
 /*nav-bar*/
 #menu-wrapper {
@@ -13,6 +57,7 @@ Author: Jonina, Yevhenii, Kian & Valeria
 
 #menu-icon {
     cursor: pointer;
+    position: fixed;
 }
 
 .main-navigation {
@@ -29,6 +74,7 @@ Author: Jonina, Yevhenii, Kian & Valeria
 #menu-icon::before {
     content: "\2630"; /* Unicode character for the 'hamburger' icon */
     font-size: 24px;
+    
 }
 
 #menu-wrapper:hover .main-navigation {
@@ -47,9 +93,34 @@ Author: Jonina, Yevhenii, Kian & Valeria
     text-align: center;
 }
 
+.play-title {
+    position: fixed;
+    top: 10%;
+}
+
 .play-title h1 {
-   font-family: 'Yusei Magic', sans-serif;
-   font-size: 90px;
+    font-family: 'Mali', cursive;
+    font-size: 90px;
+    margin: 0;
+    padding: 0;
+   
+}
+
+.play-summary {
+    margin-top: 5%;
+    padding-top: 5% ;
+    background-color: #638ec778;
+    
+}
+
+.play-summary p {
+    font-family: 'Dosis', sans-serif;
+    font-size: 20px;
+    padding-top: 0;
+    margin: 0;
+    padding: 20px;
+    text-align: justify;
+
 }
 
 /*Section wrapper that displays competition and tickets section */
@@ -59,13 +130,19 @@ Author: Jonina, Yevhenii, Kian & Valeria
     align-items: center;
     flex-direction: row;
     width: 100%;
+    bottom: 5%;
+    height: 600px;
+    
 }
 
 .competition {
     width: 50%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    justify-content: end;
+    align-items: end;
+    padding: 0 5%;
+   
 }
 
 .ticket-purchase {
@@ -74,6 +151,124 @@ Author: Jonina, Yevhenii, Kian & Valeria
     justify-content: center;
     align-items: center;
 }
+/* Input */
+
+.qinput {
+    background-color: #a0b6d3;
+    border: 2px solid var(--border-color);
+    border-radius: 50px;
+    padding: 0.6rem 1.2rem;
+    position: absolute;
+    margin-top: 1.3%;
+}
+
+
+/* SubmitButton */
+
+button {
+    
+    background: transparent;
+    color: var(--purple);
+    border: 2px solid var(--border-color);
+    border-radius: 50px;
+    padding: 0.6rem 1.2rem;
+    font-size: 13px;
+    font-family: 'Mali', cursive;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    transition: 0.2s ease-in-out;
+    letter-spacing: 2px;
+    right: 15%;
+    bottom: 10%;
+  }
+  
+  .name {
+    width: 100%;
+    text-align: center;
+    padding: 0 0 3rem;
+    padding-top: 4rem;
+    font: 500 14px "Rubik", sans-serif;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+  }
+  
+  .button-parrot .parrot {
+    position: absolute;
+    width: 60px;
+    text-align: center;
+    animation: blink 0.8s infinite;
+    color: transparent;
+  }
+  
+  .button-parrot .parrot:before {
+    content: "Click Me!";
+  }
+  
+  .button-parrot .parrot:nth-child(1) {
+    top: -30px;
+    left: -40px;
+    font-size: 13px;
+    font-family: 'Dosis', sans-serif;
+    transform: rotate(-20deg);
+    animation-duration: 0.5s;
+  }
+  
+  .button-parrot .parrot:nth-child(2) {
+    font: 12px/1 'Mali', sans-serif;
+    right: -40px;
+    top: -20px;
+    transform: rotate(15deg);
+    animation-duration: 0.4s;
+  }
+  
+  .button-parrot .parrot:nth-child(3) {
+    font: 16px/1 "Margarine", sans-serif;
+    top: -60px;
+    left: 15px;
+    transform: rotate(10deg);
+    animation-duration: 1s;
+  }
+  
+  .button-parrot .parrot:nth-child(4) {
+    font: 18px/1 "Margarine", sans-serif;
+    top: -70px;
+    left: 95px;
+    transform: rotate(2deg);
+    animation-duration: 0.7s;
+  }
+  
+  .button-parrot .parrot:nth-child(5) {
+    font: 14px/1 'Mali', sans-serif;
+    top: 65px;
+    left: 55px;
+    transform: rotate(-20deg);
+    animation-duration: 0.8s;
+  }
+  
+  .button-parrot .parrot:nth-child(6) {
+    font: 15px/1 'Dosis', sans-serif;
+    top: 70px;
+    left: -25px;
+    transform: rotate(10deg);
+    animation-duration: 1.2s;
+  }
+  
+  .button-parrot button:hover .parrot:before {
+    content: "Do it!";
+    width: 70px;
+  }
+  
+  @keyframes blink {
+    25%, 75% {
+      color: transparent;
+    }
+  
+    40%, 60% {
+      color: var(--purple);
+    }
+  }
 
 /* Directors Section*/
 
