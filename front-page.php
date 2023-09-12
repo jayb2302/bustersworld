@@ -58,6 +58,8 @@ $social_media_links = get_field('social_media_links');
 
 </div>
 
+<div id="countdown-timer"></div>
+
 
 
 <section class="contact-information">

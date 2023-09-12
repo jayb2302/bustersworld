@@ -22,6 +22,16 @@
     }
     add_action('init', 'register_custom_menus');
     
+    function enqueue_countdown_timer_script() {
+        // Enqueue jQuery (if not already loaded)
+        wp_enqueue_script('jquery');
+    
+        // Enqueue your countdown timer JavaScript
+        wp_enqueue_script('countdown-timer', get_template_directory_uri() . '/countdown.js', array('jquery'), '1.0', true);
+    }
+    
+    add_action('wp_enqueue_scripts', 'enqueue_countdown_timer_script');
+    
     
     
 ?>
