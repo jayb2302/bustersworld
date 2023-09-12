@@ -18,12 +18,12 @@ $social_media_links = get_field('social_media_links');
 ?>
 
 <section class="main-banner">
-    <div class="container">
+    <div class="front-container">
         <div class="play-title">
-            <?php echo esc_html($play_title); ?>
+            <h1><?php echo esc_html($play_title); ?></h1>
         </div>
         <div class="play-summary">
-            <?php echo esc_html($play_summary); ?>
+            <p><?php echo esc_html($play_summary); ?></p>
         </div>
         <a href="<?php echo esc_url(get_permalink(get_page_by_title('Tickets'))); ?>" class="cta-button">
             Get Your Tickets Now
@@ -31,29 +31,34 @@ $social_media_links = get_field('social_media_links');
     </div>
 </section>
 
-<section class="competition">
-    <div class="container">
-        <h2><?php echo esc_html($competition_heading); ?></h2>
-        <p><?php echo esc_html($competition_question); ?></p>
-        <form id="competition-form">
-            <input type="text" name="answer" placeholder="Your Answer" required>
-            <button type="submit">Submit</button>
-        </form>
-    </div>
-</section>
-
-<section class="ticket-purchase">
-    <div class="container">
-        <h2><?php echo esc_html($ticket_purchase_heading); ?></h2>
-        <a href="<?php echo esc_url(get_permalink(get_page_by_title('Tickets'))); ?>" class="buy-tickets-button">
-            Buy Tickets
-        </a>
-        <div class="ticket-prices">
-            <?php echo wp_kses_post($ticket_prices); ?>
+<div class="section-wrapper">
+    <section class="competition">
+        <div class="container">
+            <h2><?php echo esc_html($competition_heading); ?></h2>
+            <p><?php echo esc_html($competition_question); ?></p>
+            <form id="competition-form">
+                <input type="text" name="answer" placeholder="Your Answer" required>
+                <button type="submit">Submit</button>
+            </form>
         </div>
-        <p><?php echo esc_html($ticket_purchase_instructions); ?></p>
-    </div>
-</section>
+    </section>
+
+    <section class="ticket-purchase">
+        <div class="container">
+            <h2><?php echo esc_html($ticket_purchase_heading); ?></h2>
+            <a href="<?php echo esc_url(get_permalink(get_page_by_title('Tickets'))); ?>" class="buy-tickets-button">
+                Buy Tickets
+            </a>
+            <div class="ticket-prices">
+                <?php echo wp_kses_post($ticket_prices); ?>
+            </div>
+            <p><?php echo esc_html($ticket_purchase_instructions); ?></p>
+        </div>
+    </section>
+
+</div>
+
+
 
 <section class="contact-information">
     <div class="container">

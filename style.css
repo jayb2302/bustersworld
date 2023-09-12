@@ -22,8 +22,8 @@ Author: Jonina, Yevhenii, Kian & Valeria
     border: 1px solid #ddd; /* Add a border for the menu */
 }
 
-/* Style your menu icon here */
-/* Example style for a simple menu icon: */
+/* Style menu icon here */
+
 #menu-icon::before {
     content: "\2630"; /* Unicode character for the 'hamburger' icon */
     font-size: 24px;
@@ -31,4 +31,39 @@ Author: Jonina, Yevhenii, Kian & Valeria
 
 #menu-wrapper:hover .main-navigation {
     display: block; /* Show the menu on hover */
+}
+
+.front-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.front-container .play-summary {
+    width: 50%;
+    text-align: center;
+}
+
+/*Section wrapper that displays competition and tickets section */
+.section-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.competition {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ticket-purchase {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
