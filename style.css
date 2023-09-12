@@ -32,7 +32,7 @@ Author: Jonina, Yevhenii, Kian & Valeria
 #menu-wrapper:hover .main-navigation {
     display: block; /* Show the menu on hover */
 }
-
+/* Front Page */
 .front-container {
     display: flex;
     justify-content: center;
@@ -66,4 +66,19 @@ Author: Jonina, Yevhenii, Kian & Valeria
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Directors Section*/
+
+.directors-photo {
+    width: 200px; 
+    height: 200px; 
+    object-fit: cover;
+}
+
+/* Actors List */
+.actor-photo {
+    width: 200px; 
+    height: 200px; 
+    object-fit: cover;
 }
