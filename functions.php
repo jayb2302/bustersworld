@@ -13,6 +13,15 @@
      }
      add_action( 'init', 'ad_remove_gutenberg' );
 
+     function register_custom_menus() {
+        register_nav_menus(
+            array(
+                'primary-menu' => __('Primary Menu', 'bustersworld'), // You can change 'Primary Menu' to your desired menu name
+            )
+        );
+    }
+    add_action('init', 'register_custom_menus');
+    
     
     
 ?>

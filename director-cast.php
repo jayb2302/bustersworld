@@ -29,29 +29,37 @@ $leave_review_button_text = get_field('leave_review_button_text');
     <h2><?php echo esc_html($director_name); ?></h2>
 </div>
 
-<!-- List of Actors -->
 <div class="actors-list">
     <h2>List of Actors</h2>
     <ul>
         <?php
         $actors_query = new WP_Query(array(
-            'post_type' => 'Actors', // Custom post type
+            'post_type' => 'actor', // Custom post type
             'posts_per_page' => -1,
         ));
 
         if ($actors_query->have_posts()) :
             while ($actors_query->have_posts()) : $actors_query->the_post();
         ?>
-                <li><?php the_title(); ?> (<?php echo esc_html(get_field('actors_name')); ?>)</li>
+                <h2>
+                <?php echo esc_html(get_field('actors_name')); ?>
+                </h2>
+                <img src="<?php echo esc_url(get_field('actor-photo')['url']); ?>" alt="<?php echo esc_attr(get_the_title()); ?>">
+
+                <!-- Display other custom fields -->
+                <p> <?php echo esc_html(get_field('character-name')); ?></p>
+                <p> <?php echo wp_kses_post(get_field('biography')); ?></p>
+                <p>Social Media Profile: <a href="<?php echo esc_url(get_field('social-media-profile')); ?>" target="_blank"><?php echo esc_html(get_field('social-media-profile')); ?></a></p>
         <?php
             endwhile;
-            wp_reset_postdata(); // Reset post data
+            wp_reset_postdata();
         else :
             echo 'No actors found.';
         endif;
         ?>
     </ul>
 </div>
+
 
 
 <!-- List of Sponsors -->

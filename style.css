@@ -1,4 +1,34 @@
 /*
 Theme Name: Busters World
+Text Domain: bustersworld
 Author: Jonina, Yevhenii, Kian & Valeria
 */
+
+/*nav-bar*/
+#menu-wrapper {
+    position: relative;
+}
+
+#menu-icon {
+    cursor: pointer;
+}
+
+.main-navigation {
+    display: none; /* Hide the menu initially */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff; /* Background color of the menu */
+    border: 1px solid #ddd; /* Add a border for the menu */
+}
+
+/* Style your menu icon here */
+/* Example style for a simple menu icon: */
+#menu-icon::before {
+    content: "\2630"; /* Unicode character for the 'hamburger' icon */
+    font-size: 24px;
+}
+
+#menu-wrapper:hover .main-navigation {
+    display: block; /* Show the menu on hover */
+}
