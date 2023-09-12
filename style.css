@@ -4,6 +4,8 @@ Text Domain: bustersworld
 Author: Jonina, Yevhenii, Kian & Valeria
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Shadows+Into+Light&family=Yusei+Magic&display=swap');
+
 /*nav-bar*/
 #menu-wrapper {
     position: relative;
@@ -32,7 +34,7 @@ Author: Jonina, Yevhenii, Kian & Valeria
 #menu-wrapper:hover .main-navigation {
     display: block; /* Show the menu on hover */
 }
-
+/* Front Page */
 .front-container {
     display: flex;
     justify-content: center;
@@ -43,6 +45,11 @@ Author: Jonina, Yevhenii, Kian & Valeria
 .front-container .play-summary {
     width: 50%;
     text-align: center;
+}
+
+.play-title h1 {
+   font-family: 'Yusei Magic', sans-serif;
+   font-size: 90px;
 }
 
 /*Section wrapper that displays competition and tickets section */
@@ -66,4 +73,19 @@ Author: Jonina, Yevhenii, Kian & Valeria
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Directors Section*/
+
+.directors-photo {
+    width: 200px; 
+    height: 200px; 
+    object-fit: cover;
+}
+
+/* Actors List */
+.actor-photo {
+    width: 200px; 
+    height: 200px; 
+    object-fit: cover;
 }

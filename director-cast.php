@@ -5,9 +5,9 @@
     * Template Name: Director & Cast
     */
 // Retrieve ACF fields for the subpage
-$director_welcome_text = get_field('director_welcome_text');
-$director_photo = get_field('director_photo');
-$director_name = get_field('director_name');
+$directors_welcome_text = get_field('directors_welcome_text');
+$directors_photo = get_field('directors_photo');
+$directors_name = get_field('directors_name');
 $actors = get_field('actors');
 $sponsors = get_field('sponsors');
 $leave_review_button_text = get_field('leave_review_button_text');
@@ -19,14 +19,14 @@ $leave_review_button_text = get_field('leave_review_button_text');
 <h1>Welcome to the Play’s Online Companion</h1>
 
 <!-- Director's Welcome Text -->
-<div class="director-welcome">
-    <?php echo wp_kses_post($director_welcome_text); ?>
+<div class="directors-welcome">
+    <?php echo wp_kses_post($directors_welcome_text); ?>
 </div>
 
 <!-- Director's Photo/Name -->
-<div class="director-info">
-    <img src="<?php echo esc_url($director_photo['url']); ?>" alt="<?php echo esc_attr($director_name); ?>">
-    <h2><?php echo esc_html($director_name); ?></h2>
+<div class="directors-info">
+    <img class="directors-photo" src="<?php echo esc_url($directors_photo['url']); ?>" alt="<?php echo esc_attr($directors_name); ?>">
+    <h2><?php echo esc_html($directors_name); ?></h2>
 </div>
 
 <div class="actors-list">
@@ -44,7 +44,7 @@ $leave_review_button_text = get_field('leave_review_button_text');
                 <h2>
                 <?php echo esc_html(get_field('actors_name')); ?>
                 </h2>
-                <img src="<?php echo esc_url(get_field('actor-photo')['url']); ?>" alt="<?php echo esc_attr(get_the_title()); ?>">
+                <img class="actor-photo" src="<?php echo esc_url(get_field('actor-photo')['url']); ?>" alt="<?php echo esc_attr(get_the_title()); ?>">
 
                 <!-- Display other custom fields -->
                 <p> <?php echo esc_html(get_field('character-name')); ?></p>

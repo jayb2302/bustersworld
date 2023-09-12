@@ -1,4 +1,21 @@
 <?php
+var_dump(is_page_template('front-page.php')); // Debugging line
+var_dump(is_page_template('director-cast.php')); // Debugging line
+
+
+add_action('init', 'register_custom_styles');
+function register_custom_styles() {
+    wp_register_style( 'front-page', '/Styles/front-page.css' );
+}
+add_action( 'wp_enqueue_scripts', 'conditionally_enqueue_styles_scripts' );
+function conditionally_enqueue_styles_scripts() {
+    if ( is_page('front-page.php') ) {
+        wp_enqueue_style( 'front-page' );
+    }
+}
+
+    
+
     function load_stylesheets()
     {
         wp_register_style("stylesheet", get_template_directory_uri() . "/style.css", "", 1, "all");
@@ -34,4 +51,3 @@
     
     
     
-?>
