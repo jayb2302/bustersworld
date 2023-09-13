@@ -6,12 +6,15 @@ jQuery(document).ready(function($) {
         let now = new Date().getTime();
         let distance = countdownDate - now;
 
-        let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        let day = Math.floor(distance / (1000 * 60 * 60 * 24));
+        let hour = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let min = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
 
         // Replace 'countdown-timer' with the ID or class of the element where you want to display the countdown
-        $("#countdown-timer").html(days + " " + hours + " " + minutes);
+        document.querySelector("#day").innerHTML = day;
+        document.querySelector("#hour").innerHTML = hour;
+        document.querySelector("#min").innerHTML = min;
+
 
         if (distance < 0) {
             clearInterval(x);

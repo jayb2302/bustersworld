@@ -75,7 +75,24 @@ $social_media_links = get_field('social_media_links');
 
 </div>
 
-<div id="countdown-timer"></div>
+<div class="wrapper">
+    <h1 class="heading">Week 7</h1>
+
+    <div class="timer">
+        <div class="sub_timer">
+            <h1 id="day" class="digit">00</h1>
+            <p class="digit_name">Days</p>
+        </div>
+        <div class="sub_timer">
+            <h1 id="hour" class="digit">00</h1>
+            <p class="digit_name">Hours</p>
+        </div>
+        <div class="sub_timer">
+            <h1 id="min" class="digit">00</h1>
+            <p class="digit_name">Minutes</p>
+        </div>
+    </div>
+</div>
 
 <div class="third-cloud"></div>
 
