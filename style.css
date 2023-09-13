@@ -272,6 +272,8 @@ button {
 /* Directors Section*/
 .page-wrapper {
     display: flex;
+    flex-direction: row;
+    position: relative;
     width: 100%;
 }
 
@@ -282,7 +284,7 @@ button {
     align-items: center;
     flex-direction: column;
     position: fixed;
-   
+    top: 10%;
 }
 
 .directors-info {
@@ -293,27 +295,8 @@ button {
     background-color: #f5f3f6;
     padding-top: 5%;
     margin-top: 5%;
-    border: 3px solid #333333;
-    border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
-    box-shadow:  -10px -10px 4px #f3f1f5;
     letter-spacing: 0.3ch;
-    
 }
-
-.directors-info::before {
-    content: '';
-    border: 2px solid #353535;
-    display: block;
-    width: 50%;
-    height: 95%;
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate3d(-50%, -50%, 0) scale(1) rotate(0.5deg);
-    border-radius: 1% 1% 2% 4% / 2% 6% 5% 4%;
-   
-}
-
 
 .directors-photo {
     width: 200px; 
@@ -327,114 +310,146 @@ button {
     
 }
 
+.review-section {
+    width: 100%;
+    position: relative;
+    background-color: #638EC7;
+    z-index: 2;
+    height: auto;
+}
 
+.wpcr3_respond_1 ,.wpcr3_in_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+.wpcr3_respond_1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+.wpcr3_reviews_holder {
+    color: #ffffff;
+    left: 10%;
+    position: relative;
+    width: 40%;
+}
 
 /* Actors List */
 .actor-photo {
-    width: 150px; 
-    height: 150px; 
+    width: 160px; 
+    height: 160px; 
     object-fit: cover;
     position: absolute;
-    right: -15%;
-    top: -30%;
-    border: 3px solid #333333;
+    right:   10%;
+    top: -45%;
     border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
-    box-shadow:  -10px 10px 4px #8869A8;
+    box-shadow:  -5px 5px 4px #F27821;
     letter-spacing: 0.3ch;
     background: #ffffff;
+    border-radius: 50% 50%;
+    z-index: -1;
    
 }
 
-.actor-photo::before {
-    content: '';
-    border: 2px solid #353535;
-    display: block;
-    width: 100%;
-    height: 100%;
+
+.horizontal-scroll h2 {
+    color: #ffffff;
+    font-family: 'Mali', cursive;
+}
+
+.line {
+    height: 85px;
+}
+
+.actor-item h2 {
+    font-family: 'Mali', cursive;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    padding: 1%;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate3d(-50%, -50%, 0) scale(1.015) rotate(0.5deg);
-    border-radius: 1% 1% 2% 4% / 2% 6% 5% 4%;
-}
-
-.actors-list {
-    width: 50%;
-    position: relative;
-    left: 50%;
     
+   
 }
-
-.actors-list h2 {
+.actor-item h3 {
     font-family: 'Mali', cursive;
-    font-size: 30px;
-    text-align: start;
+    font-size: 18px;
     margin: 0;
-    padding: 0;
+    margin-top: 1%;
+    padding-bottom: 2%;
+    color: var(--purple);
+    text-align: center;
    
     
-    
-}
-.actors-list h3 {
-    font-family: 'Mali', cursive;
-    font-size: 20px;
-    margin: 0;
-    padding: 0;
-    color: var(--purple);
-    text-align: start;
-    
 }
 
-.actors-list h4 {
+.actor-item h4 {
     font-family: 'Mali', cursive;
-    font-size: 30px;
-    margin-top: -2%;
+    font-size: 25px;
+    padding-top: 10%;
     padding: 0;
+    margin-top: 10%;
     margin-bottom: 0;
     color: var(--purple);
-    text-align: start;
+    text-align: center;
+    
 }
 
-.actors-list p {
+.actor-item p {
     font-family: 'Dosis', sans-serif;
     font-size: 16px;
-    padding-top: 0;
     margin: 0;
-    padding:0 1px;
-    width: 70%;
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: center;
+    white-space: pre-line  ;
+}
+
+.actors-wrapper{
+    position: relative;
+    height: 800px;
+    width: 100%;
+  
+}
+.actors-scroll-container {
+    overflow-x: auto; 
+    white-space: nowrap; 
+    padding: 0 0; 
+    position:absolute;
+    bottom: 0%;
+    width: 100%;
 }
 
 
 .actors-container {
-    background-color: #cedaea;
-    padding: 1% 2% ;
-    margin: 5% 0px;
-    width: 65%;
-    display: flex;
-    flex-direction: column;
-    border: 3px solid #333333;
-    border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
-    box-shadow:  
-                 -10px -10px 3px #ffffff;
+    display: inline-block;
+    margin: 0 ;
+    margin-left: 1%;
+    max-width: 25%;
+    height: 230px;  
+    margin-top: 2%;  
     letter-spacing: 0.3ch;
-    background: #ffffff;
     position: relative; 
- 
-}
-.actors-container::before{
+    background-image: url("images/cardcloud.png"); ;
+    background-position-y: 0%;
+    background-size: contain;
+    background-repeat: round;
    
-    content: '';
-    border: 2px solid #353535;
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate3d(-50%, -50%, 0) scale(1.015) rotate(0.5deg);
-    border-radius: 1% 1% 2% 4% / 2% 6% 5% 4%;
-    
 }
+
+
+.actor-item {
+    white-space: nowrap; 
+    vertical-align: bottom; 
+   
+}
+
+
+
 
 /* Reviews Section */
 .wpcr3_respond_1 {
