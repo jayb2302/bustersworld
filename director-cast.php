@@ -2,8 +2,9 @@
 <?php
 
 /**
-    * Template Name: Director & Cast
-    */
+* Template Name: Director & Cast
+*/
+
 // Retrieve ACF fields for the subpage
 $directors_welcome_text = get_field('directors_welcome_text');
 $directors_photo = get_field('directors_photo');
@@ -16,50 +17,63 @@ $leave_review_button_text = get_field('leave_review_button_text');
 <?php get_header(); ?>
 
 <!-- Page Header -->
-<h1>Welcome to the Play’s Online Companion</h1>
+<h1></h1>
+<div class="page-wrapper">
+    
+    <div class="directors-container">
 
-<!-- Director's Welcome Text -->
-<div class="directors-welcome">
-    <?php echo wp_kses_post($directors_welcome_text); ?>
+        <div class="directors-info">
+            <img class="directors-photo" src="<?php echo esc_url($directors_photo['url']); ?>" alt="<?php echo esc_attr($directors_name); ?>">
+            <h2><?php echo esc_html($directors_name); ?></h2>
+            <div class="directors-welcome">
+                <p><?php echo wp_kses_post($directors_welcome_text); ?></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="actors-list">
+        <h2><?php echo esc_html(get_field('actors_list')); ?></h2>
+        <ul>
+            <?php 
+            
+            $actors_query = new WP_Query(array(
+                'post_type' => 'actor', // Custom post type
+                'posts_per_page' => -1,
+            ));
+           
+             if ($actors_query->have_posts()) :
+                while ($actors_query->have_posts()) : $actors_query->the_post();
+            ?>
+            <div class="actors-container">
+                    <img class="actor-photo" src="<?php echo esc_url(get_field('actor-photo')['url']); ?>" alt="<?php echo esc_attr(get_the_title()); ?>">
+                    <h4>
+                    <?php echo esc_html(get_field('actors_name')); ?>
+                    </h4>
+
+                    <!-- Display other custom fields -->
+                    <h3> <?php echo esc_html(get_field('character-name')); ?></h3>
+                    <p> <?php echo esc_html(wp_trim_words(get_field('biography'), 20)); ?></p>
+                    <p>Social Media Profile: <a href="<?php echo esc_url(get_field('social-media-profile')); ?>" target="_blank"><?php echo esc_html(get_field('social-media-profile')); ?></a></p>
+            </div>
+            <?php
+                endwhile;
+                wp_reset_postdata();
+            else :
+                echo 'No actors found.';
+            endif; 
+            
+            ?>
+           
+           
+        </ul>
+      
+    </div>
+   
 </div>
-
-<!-- Director's Photo/Name -->
-<div class="directors-info">
-    <img class="directors-photo" src="<?php echo esc_url($directors_photo['url']); ?>" alt="<?php echo esc_attr($directors_name); ?>">
-    <h2><?php echo esc_html($directors_name); ?></h2>
-</div>
-
-<div class="actors-list">
-    <h2>List of Actors</h2>
-    <ul>
-        <?php
-        $actors_query = new WP_Query(array(
-            'post_type' => 'actor', // Custom post type
-            'posts_per_page' => -1,
-        ));
-
-        if ($actors_query->have_posts()) :
-            while ($actors_query->have_posts()) : $actors_query->the_post();
-        ?>
-                <h2>
-                <?php echo esc_html(get_field('actors_name')); ?>
-                </h2>
-                <img class="actor-photo" src="<?php echo esc_url(get_field('actor-photo')['url']); ?>" alt="<?php echo esc_attr(get_the_title()); ?>">
-
-                <!-- Display other custom fields -->
-                <p> <?php echo esc_html(get_field('character-name')); ?></p>
-                <p> <?php echo wp_kses_post(get_field('biography')); ?></p>
-                <p>Social Media Profile: <a href="<?php echo esc_url(get_field('social-media-profile')); ?>" target="_blank"><?php echo esc_html(get_field('social-media-profile')); ?></a></p>
-        <?php
-            endwhile;
-            wp_reset_postdata();
-        else :
-            echo 'No actors found.';
-        endif;
-        ?>
-    </ul>
-</div>
-
+ <?php
+            $review_shortcode = get_post_meta(get_the_ID(), 'review_shortcode', true);
+            echo do_shortcode($review_shortcode);
+    ?>
 
 
 <!-- List of Sponsors -->

@@ -12,9 +12,8 @@ Author: Jonina, Yevhenii, Kian & Valeria
 }
 
 body{
-    background-color: var(--background-color);
-    margin: 0;
-    padding: 0;
+    background: rgb(99,142,199);
+    background: radial-gradient(circle, rgba(99,142,199,1) 47%, rgba(158,185,220,1) 100%);    padding: 0;
    
 }
 .first-cloud {
@@ -271,16 +270,173 @@ button {
   }
 
 /* Directors Section*/
+.page-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.directors-container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+   
+}
+
+.directors-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f3f6;
+    padding-top: 5%;
+    margin-top: 5%;
+    border: 3px solid #333333;
+    border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+    box-shadow:  -10px -10px 4px #f3f1f5;
+    letter-spacing: 0.3ch;
+    
+}
+
+.directors-info::before {
+    content: '';
+    border: 2px solid #353535;
+    display: block;
+    width: 50%;
+    height: 95%;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0) scale(1) rotate(0.5deg);
+    border-radius: 1% 1% 2% 4% / 2% 6% 5% 4%;
+   
+}
+
 
 .directors-photo {
     width: 200px; 
     height: 200px; 
     object-fit: cover;
+    border: 3px solid #333333;
+    border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+    box-shadow:  10px 10px 4px #8869A8;
+    letter-spacing: 0.3ch;
+    background: #ffffff;
+    
 }
+
+
 
 /* Actors List */
 .actor-photo {
-    width: 200px; 
-    height: 200px; 
+    width: 150px; 
+    height: 150px; 
     object-fit: cover;
+    position: absolute;
+    right: -15%;
+    top: -30%;
+    border: 3px solid #333333;
+    border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+    box-shadow:  -10px 10px 4px #8869A8;
+    letter-spacing: 0.3ch;
+    background: #ffffff;
+   
+}
+
+.actor-photo::before {
+    content: '';
+    border: 2px solid #353535;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0) scale(1.015) rotate(0.5deg);
+    border-radius: 1% 1% 2% 4% / 2% 6% 5% 4%;
+}
+
+.actors-list {
+    width: 50%;
+    position: relative;
+    left: 50%;
+    
+}
+
+.actors-list h2 {
+    font-family: 'Mali', cursive;
+    font-size: 30px;
+    text-align: start;
+    margin: 0;
+    padding: 0;
+   
+    
+    
+}
+.actors-list h3 {
+    font-family: 'Mali', cursive;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    color: var(--purple);
+    text-align: start;
+    
+}
+
+.actors-list h4 {
+    font-family: 'Mali', cursive;
+    font-size: 30px;
+    margin-top: -2%;
+    padding: 0;
+    margin-bottom: 0;
+    color: var(--purple);
+    text-align: start;
+}
+
+.actors-list p {
+    font-family: 'Dosis', sans-serif;
+    font-size: 16px;
+    padding-top: 0;
+    margin: 0;
+    padding:0 1px;
+    width: 70%;
+}
+
+
+.actors-container {
+    background-color: #cedaea;
+    padding: 1% 2% ;
+    margin: 5% 0px;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #333333;
+    border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+    box-shadow:  
+                 -10px -10px 3px #ffffff;
+    letter-spacing: 0.3ch;
+    background: #ffffff;
+    position: relative; 
+ 
+}
+.actors-container::before{
+   
+    content: '';
+    border: 2px solid #353535;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0) scale(1.015) rotate(0.5deg);
+    border-radius: 1% 1% 2% 4% / 2% 6% 5% 4%;
+    
+}
+
+/* Reviews Section */
+.wpcr3_respond_1 {
+    font-family: 'Dosis', sans-serif;
 }
