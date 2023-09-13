@@ -16,6 +16,8 @@ $ticket_prices = get_field('ticket_prices');
 $ticket_purchase_instructions = get_field('ticket_purchase_instructions');
 $contact_information = get_field('contact_information');
 $social_media_links = get_field('social_media_links');
+$title = get_field('title');
+$question = get_field('question');  
 ?>
 
 <section class="main-banner">
@@ -93,6 +95,10 @@ $social_media_links = get_field('social_media_links');
         </div>
     </div>
 </div>
+
+<h1><?php echo esc_html($title); ?></h1>
+<p><?php echo esc_html($question); ?></p>
+<?php echo do_shortcode('[contact-form-7 id="ee6a125" title="Contact form 1"]') ?>
 
 <div class="third-cloud"></div>
 
