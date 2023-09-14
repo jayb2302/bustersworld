@@ -14,17 +14,20 @@ Author: Jonina, Yevhenii, Kian & Valeria
 body{
     background: rgb(99,142,199);
     background: radial-gradient(circle, rgba(99,142,199,1) 47%, rgba(158,185,220,1) 100%);    padding: 0;
-   
+    margin: 0;
 }
 .first-cloud {
-    background-image: url("images/first-cloud.png");
+    background-image: url("images/forth-cloud.png");
     width: 100%;
-    height: 790px;
+    height: 690px;
     position: absolute;
     background-repeat: no-repeat;
     background-position: bottom ;
     bottom: 5%;
     z-index: -1;
+    margin: 0;
+    top: 35%;
+    opacity: 0.7;
 }
 .second-cloud {
     background-image: url("images/second-cloud.png");
@@ -44,7 +47,7 @@ body{
     width: 100%;
     height:600px;
     position: fixed;
-    bottom: 10%;
+    bottom: 0%;
     z-index: -3;
 }
 
@@ -52,18 +55,19 @@ body{
 /*nav-bar*/
 #menu-wrapper {
     position: relative;
+    z-index: 3;
 }
 
 #menu-icon {
     cursor: pointer;
     position: fixed;
+    right: 2%;
 }
 
 .main-navigation {
     display: none; /* Hide the menu initially */
     position: absolute;
     top: 100%;
-    left: 0;
     background-color: #fff; /* Background color of the menu */
     border: 1px solid #ddd; /* Add a border for the menu */
 }
@@ -78,6 +82,7 @@ body{
 
 #menu-wrapper:hover .main-navigation {
     display: block; /* Show the menu on hover */
+    right: 0;
 }
 /* Front Page */
 .front-container {
@@ -95,13 +100,16 @@ body{
 .play-title {
     position: fixed;
     top: 10%;
+    padding: 0 5%;
+    background-color: #638EC7;
+    z-index: -2;
 }
 
 .play-title h1 {
     font-family: 'Mali', cursive;
     font-size: 90px;
     margin: 0;
-    padding: 0;
+    
    
 }
 
@@ -118,7 +126,9 @@ body{
     padding-top: 0;
     margin: 0;
     padding: 20px;
-    text-align: justify;
+    text-align: center;
+    color: #000;
+    z-index: -5;
 
 }
 
@@ -130,25 +140,88 @@ body{
     flex-direction: row;
     width: 100%;
     bottom: 5%;
-    height: 600px;
+    height: 300px;
     
 }
 
 .competition {
-    width: 50%;
+   
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: end;
-    align-items: end;
+    align-items: center;
     padding: 0 5%;
    
 }
+.competition h2 {
+   
+    font-family: 'Mali', cursive;
+    font-size: 30px;
+    padding-top: 35%;
+   
+}
 
-.ticket-purchase {
-    width: 50%;
+.competition-container p {
+    font-family: 'Mali', cursive;
+    padding: 0 20%;
+    text-align: center;
+    padding-top: 10%;
+    color: #000;
+    font-size: 18px;
+    
+}
+
+.competition-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    background-image: url("images/Buster.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: 50%;
+    bottom: 10%;
+    padding-top: 10%;
+    height: 600px;
+}
+.ticket-section {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  
+}
+.ticket-office , .ticket-online, .ticket-phone {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 300px;
+    padding: 0 6%;
+    font-family: 'dois', sans-serif;
+}
+.ticket-office p, .ticket-online p, .ticket-phone p{
+   
+    font-size: 18px;
+    font-family: 'dois', sans-serif;
+}
+
+button {
+    background-color: #fbf9f8;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'dois', sans-serif;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    transition: 0.2s ease-in-out;
+    
 }
 /* Input */
 
@@ -157,16 +230,26 @@ body{
     border: 2px solid var(--border-color);
     border-radius: 50px;
     padding: 0.6rem 1.2rem;
-    position: absolute;
-    margin-top: 1.3%;
+    position: relative;
+    margin-top: 25%;
+    
+    z-index: 4;
 }
 
-
+#competition-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    
+    
+}
 /* SubmitButton */
 
-button {
+.clickmebtn {
     
-    background: transparent;
+    background: white;
     color: var(--purple);
     border: 2px solid var(--border-color);
     border-radius: 50px;
@@ -175,11 +258,15 @@ button {
     font-family: 'Mali', cursive;
     outline: none;
     cursor: pointer;
-    position: absolute;
+    position: relative;
     transition: 0.2s ease-in-out;
     letter-spacing: 2px;
-    right: 15%;
-    bottom: 10%;
+    margin-top: 50%;
+    top: -150%;
+    right: -200%;
+    z-index: 3;
+    rotate: -45deg;
+    
   }
   
   .name {
@@ -282,60 +369,97 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction:column;
     position: fixed;
-    top: 10%;
+    
+    text-align: center;
 }
 
 .directors-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #f5f3f6;
-    padding-top: 5%;
-    margin-top: 5%;
-    letter-spacing: 0.3ch;
+
+  width: 100%;
+    letter-spacing: 0.1ch;
+    padding: 0 1%;
 }
+.directors-info h2 {
+    font-family: 'Mali', cursive;
+    font-size: 30px;
+    color: var(--purple);
+    padding-left:30%;
+   
+    padding-right: 0%;
+
+}
+.directors-welcome p {
+    font-family: 'dois', sans-serif;
+    font-size: 18px;
+    padding: 0;
+    color: black;
+    text-align: center;
+ padding-left: 20%;
+    padding-top: 10%;
+   
+    
+}
+
 
 .directors-photo {
     width: 200px; 
     height: 200px; 
     object-fit: cover;
-    border: 3px solid #333333;
     border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
-    box-shadow:  10px 10px 4px #8869A8;
-    letter-spacing: 0.3ch;
+    box-shadow:  -10px 10px 4px #8869A8;
     background: #ffffff;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    border-radius: 50% 50%;
     
 }
 
 .review-section {
-    width: 100%;
-    position: relative;
+    width: 50%;
+    position: fixed;
+    right: 0;
+    top: 10%;
     background-color: #638EC7;
+    font-family: 'Dosis', sans-serif;
     z-index: 2;
-    height: auto;
+    
 }
+.wpcr3_respond_3 .wpcr3_button_1 .wpcr3_show_btn{
+    background-color: #000;
+}
+.wpcr3_button_1  {
+background-image: url("images/cardcloud.png");  
+    border: 0px solid #F27821!important;
+}
+.wpcr3_button_1:hover  {
+    background-image: url("images/cardcloud.png");  
+        border: 1px solid #F27821!important;
+    }
+    
 
-.wpcr3_respond_1 ,.wpcr3_in_content{
-    display: flex;
-    flex-direction: column;
+.wpcr3_respond_1 {
+  
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    position: relative;
+   
+    left: 10%;
 }
-.wpcr3_respond_1 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
+.wpcr3_in_content p{
+    color: #ffffff;
+   
 }
+
 .wpcr3_reviews_holder {
     color: #ffffff;
-    left: 10%;
     position: relative;
-    width: 40%;
+    width: 100%;
+    
+
 }
 
 /* Actors List */
@@ -461,10 +585,13 @@ button {
 }
 .wrapper{
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
     flex-direction: column;
     width: 100%;
+    height: 600px;
+    margin-top: -5%;
+    
 
 }
 .timer{
@@ -476,6 +603,7 @@ button {
 }
 .sub_timer{
   width: 220px;
+  
   background-color: rgb(255, 255, 255, 0.19);
   backdrop-filter: blur(20px);
   border-radius: 20px;
@@ -486,13 +614,13 @@ button {
   font-weight: lighter;
   font-size: 70px;
   text-align: center;
-  padding: 2.5rem 0;
+  padding: 0.2rem 0;
 }
 .digit_name{
   color: #000;
   background-color: #fff;
   text-align: center;
-  padding: 0.4rem 0;
+  padding: 0.8rem 0;
   font-size: 20px;
   
 }
