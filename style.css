@@ -153,6 +153,28 @@ body{
     padding: 0 5%;
    
 }
+.eye-white{
+    width: 40px;
+    height: 40px;
+    margin: 25px;
+    border-radius: 50%;
+    position: relative;
+    top: 310px;
+    right: 3px;
+    display: inline-block;
+    overflow: hidden;
+    background: #fff;
+  }
+  .eye-ball{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background:black;    
+  }
 .competition h2 {
    
     font-family: 'Mali', cursive;
@@ -583,7 +605,7 @@ background-image: url("images/cardcloud.png");
     z-index: 1;
     position: relative;
 }
-.wrapper{
+.countdown-wrapper{
     display: flex;
     justify-content: end;
     align-items: center;
@@ -630,11 +652,20 @@ footer{
   position: fixed;
   bottom: 0;
   width: 100%;
+  background-image: url("images/second-cloud.png");
+  background-size: cover;
+  height: 300px;
 }
-.footer{
+.footer-wrapper{
   display: flex;
   justify-content: space-between;
+  bottom: 0;
+  position: fixed;
   padding: 0 10%;
+  z-index: 10;
+  width: 80%;
+
+  
 }
 p{
   font-size: medium;

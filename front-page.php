@@ -1,4 +1,4 @@
- <?php
+<?php
     /**
     * Template Name: Front Page
     * 
@@ -37,7 +37,7 @@ $question = get_field('question');
         </div>
      
     </div>   
-    <div class="second-cloud"></div>
+    <!-- <div class="second-cloud"></div> -->
 </section>
 
 <div class="section-wrapper">
@@ -70,12 +70,35 @@ $question = get_field('question');
  
 <section class="competition">
         <div class="competition-container">
+            <div class="eyes">
+                <div class="eye-white">
+                    <div id="eye-ball" class="eye-ball"></div>
+                </div>
+                <div class="eye-white">
+                    <div class="eye-ball"></div>
+                </div>
+            </div>
             <h2><?php echo esc_html($competition_heading); ?></h2>
             <p><?php echo esc_html($competition_question); ?></p>
             <!-- <?php echo do_shortcode('[contact-form-7 id="ee6a125" title="Contact form 1"]') ?> -->
             <?php echo do_shortcode('[contact-form-7 id="697d9dd" title="Competition"]') ?>
                      
           
+            
+
+            <!-- <form id="competition-form">
+                <input class="qinput" type="text" name="answer" placeholder="Your Answer" required>
+                <div class="item button-parrot">
+                    <button class="clickmebtn" type="submit">Submit
+                        <div class="parrot"></div>
+                        <div class="parrot"></div>
+                        <div class="parrot"></div>
+                        <div class="parrot"></div>
+                        <div class="parrot"></div>
+                        <div class="parrot"></div>
+                    </button>
+                </div>
+            </form> -->
         </div>
     </section>
 
@@ -84,27 +107,21 @@ $question = get_field('question');
 </div>
 
 
-
-
-<div class="third-cloud"></div>
-
-
-
 <div class="third-cloud">
-    <div class="wrapper">
+    <div class="countdown-wrapper">
 
         <div class="timer">
             <div class="sub_timer">
-                <h1 id="day" class="digit">00</h1>
                 <p class="digit_name">Days</p>
+                <h1 id="day" class="digit">00</h1>
             </div>
             <div class="sub_timer">
-                <h1 id="hour" class="digit">00</h1>
                 <p class="digit_name">Hours</p>
+                <h1 id="hour" class="digit">00</h1>
             </div>
             <div class="sub_timer">
-                <h1 id="min" class="digit">00</h1>
                 <p class="digit_name">Minutes</p>
+                <h1 id="min" class="digit">00</h1>
             </div>
         </div>
     </div>
@@ -118,4 +135,4 @@ $question = get_field('question');
     </div>
 </section>
 
-<?php get_footer();
+<?php get_footer(); ?>

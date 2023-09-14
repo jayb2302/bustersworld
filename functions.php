@@ -42,12 +42,18 @@ function conditionally_enqueue_styles_scripts() {
         wp_enqueue_script('jquery');
     
         // Enqueue your countdown timer JavaScript
-        wp_enqueue_script('countdown-timer', get_template_directory_uri() . '/countdown.js', array('jquery'), '1.0', true);
+        wp_enqueue_script('countdown-timer', get_template_directory_uri() . '/js/countdown.js', array('jquery'), '1.0', true);
     }
     
     add_action('wp_enqueue_scripts', 'enqueue_countdown_timer_script');
     
+    function enqueue_eyes_script() {
     
+        // Enqueue your  eyes JavaScript
+        wp_enqueue_script('eyes', get_template_directory_uri() . '/js/eyes.js');
+    }
     
 
     add_filter('wpcf7_autop_or_not', '__return_false');
+    add_action('wp_enqueue_scripts', 'enqueue_eyes_script');
+
