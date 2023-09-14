@@ -88,8 +88,6 @@ $question = get_field('question');
                 </div>
             </form>
         </div>
-<<<<<<< HEAD
-=======
     </section>
 
    
@@ -125,29 +123,7 @@ $question = get_field('question');
     <div class="container">
         <?php echo wp_kses_post($contact_information); ?>
     </div>
->>>>>>> refs/remotes/origin/main
 </section>
-
-<div class="third-cloud">
-    <div class="wrapper">
-
-        <div class="timer">
-            <div class="sub_timer">
-                <h1 id="day" class="digit">00</h1>
-                <p class="digit_name">Days</p>
-            </div>
-            <div class="sub_timer">
-                <h1 id="hour" class="digit">00</h1>
-                <p class="digit_name">Hours</p>
-            </div>
-            <div class="sub_timer">
-                <h1 id="min" class="digit">00</h1>
-                <p class="digit_name">Minutes</p>
-            </div>
-        </div>
-    </div>
-</div>
-
 
 
 <section class="social-media-links">
