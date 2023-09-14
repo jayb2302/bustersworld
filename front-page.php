@@ -73,8 +73,10 @@ $question = get_field('question');
         <div class="competition-container">
             <h2><?php echo esc_html($competition_heading); ?></h2>
             <p><?php echo esc_html($competition_question); ?></p>
+            <!-- <?php echo do_shortcode('[contact-form-7 id="ee6a125" title="Contact form 1"]') ?> -->
+            <?php echo do_shortcode('[contact-form-7 id="697d9dd" title="Competition"]') ?>
 
-            <form id="competition-form">
+            <!-- <form id="competition-form">
                 <input class="qinput" type="text" name="answer" placeholder="Your Answer" required>
                 <div class="item button-parrot">
                     <button class="clickmebtn" type="submit">Submit
@@ -86,47 +88,20 @@ $question = get_field('question');
                         <div class="parrot"></div>
                     </button>
                 </div>
-            </form>
+            </form> -->
         </div>
-<<<<<<< HEAD
-=======
     </section>
 
    
 
 </div>
 
-<div class="wrapper">
-    <h1 class="heading">Week 7</h1>
 
-    <div class="timer">
-        <div class="sub_timer">
-            <h1 id="day" class="digit">00</h1>
-            <p class="digit_name">Days</p>
-        </div>
-        <div class="sub_timer">
-            <h1 id="hour" class="digit">00</h1>
-            <p class="digit_name">Hours</p>
-        </div>
-        <div class="sub_timer">
-            <h1 id="min" class="digit">00</h1>
-            <p class="digit_name">Minutes</p>
-        </div>
-    </div>
-</div>
 
-<h1><?php echo esc_html($title); ?></h1>
-<p><?php echo esc_html($question); ?></p>
-<?php echo do_shortcode('[contact-form-7 id="ee6a125" title="Contact form 1"]') ?>
 
 <div class="third-cloud"></div>
 
-<section class="contact-information">
-    <div class="container">
-        <?php echo wp_kses_post($contact_information); ?>
-    </div>
->>>>>>> refs/remotes/origin/main
-</section>
+
 
 <div class="third-cloud">
     <div class="wrapper">
