@@ -21,6 +21,8 @@ $phone_opening_hours = get_field('phone_opening_hours');
 $ticket_sale_phonenumber = get_field('ticket_sale_phonenumber');
 $ticket_office_location = get_field('ticket_office_location');
 $social_media_links = get_field('social_media_links');
+$title = get_field('title');
+$question = get_field('question');  
 ?>
 
 <section class="main-banner">
@@ -86,6 +88,44 @@ $social_media_links = get_field('social_media_links');
                 </div>
             </form>
         </div>
+<<<<<<< HEAD
+=======
+    </section>
+
+   
+
+</div>
+
+<div class="wrapper">
+    <h1 class="heading">Week 7</h1>
+
+    <div class="timer">
+        <div class="sub_timer">
+            <h1 id="day" class="digit">00</h1>
+            <p class="digit_name">Days</p>
+        </div>
+        <div class="sub_timer">
+            <h1 id="hour" class="digit">00</h1>
+            <p class="digit_name">Hours</p>
+        </div>
+        <div class="sub_timer">
+            <h1 id="min" class="digit">00</h1>
+            <p class="digit_name">Minutes</p>
+        </div>
+    </div>
+</div>
+
+<h1><?php echo esc_html($title); ?></h1>
+<p><?php echo esc_html($question); ?></p>
+<?php echo do_shortcode('[contact-form-7 id="ee6a125" title="Contact form 1"]') ?>
+
+<div class="third-cloud"></div>
+
+<section class="contact-information">
+    <div class="container">
+        <?php echo wp_kses_post($contact_information); ?>
+    </div>
+>>>>>>> refs/remotes/origin/main
 </section>
 
 <div class="third-cloud">
