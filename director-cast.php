@@ -58,7 +58,7 @@ $leave_review_button_text = get_field('leave_review_button_text');
                     </h4>
                     <h3> <?php echo esc_html(get_field('actors_name')); ?></h3>
 
-                    <p> <?php echo esc_html(wp_trim_words(get_field('biography'), 25)); ?></p>
+                    <!-- <p> <?php echo esc_html(wp_trim_words(get_field('biography'),10)); ?></p> -->
 
                     <a href="<?php echo esc_url(get_field('social-media-profile')); ?>" target="_blank"><?php echo esc_html(get_field('social-media-profile')); ?></a>
                 </div>
