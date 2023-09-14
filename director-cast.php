@@ -10,6 +10,8 @@ $directors_welcome_text = get_field('directors_welcome_text');
 $directors_photo = get_field('directors_photo');
 $directors_name = get_field('directors_name');
 $actors = get_field('actors');
+$actors_name = get_field('actors_name');
+$actor_photo = get_field('actor_photo'); 
 $sponsors = get_field('sponsors');
 $leave_review_button_text = get_field('leave_review_button_text');
 ?>
@@ -52,15 +54,15 @@ $leave_review_button_text = get_field('leave_review_button_text');
             ?>
             <div class="actors-container">
                 <div class="actor-item">
-                    <img class="actor-photo" src="<?php echo esc_url(get_field('actor-photo')['url']); ?>" alt="<?php echo esc_attr(get_the_title()); ?>">
+                    <img class="actor-photo" src="<?php echo esc_url(get_field('actor_photo')['url']); ?>" alt="<?php echo esc_attr(get_the_title()); ?>">
                     <h4>
-                    <?php echo esc_html(get_field('character-name')); ?>
+                    <?php echo esc_html(get_field('character_name')); ?>
                     </h4>
                     <h3> <?php echo esc_html(get_field('actors_name')); ?></h3>
 
                     <!-- <p> <?php echo esc_html(wp_trim_words(get_field('biography'),10)); ?></p> -->
 
-                    <a href="<?php echo esc_url(get_field('social-media-profile')); ?>" target="_blank"><?php echo esc_html(get_field('social-media-profile')); ?></a>
+                    <a href="<?php echo esc_url(get_field('social_media_profile')); ?>" target="_blank"><?php echo esc_html(get_field('social_media_profile')); ?></a>
                 </div>
             </div>
             <?php

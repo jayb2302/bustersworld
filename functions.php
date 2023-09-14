@@ -26,7 +26,7 @@ function conditionally_enqueue_styles_scripts() {
         remove_post_type_support( 'page', 'editor' );
         remove_post_type_support( 'post', 'editor' );
      }
-     add_action( 'init', 'ad_remove_gutenberg' );
+    add_action( 'init', 'ad_remove_gutenberg' );
 
      function register_custom_menus() {
         register_nav_menus(
@@ -49,3 +49,5 @@ function conditionally_enqueue_styles_scripts() {
     
     
     
+
+    add_filter('wpcf7_autop_or_not', '__return_false');

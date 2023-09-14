@@ -59,11 +59,10 @@ $question = get_field('question');
         <div class="ticket-phone">
             <h2><?php echo esc_html($by_phone); ?></h2>
             <p><?php echo esc_html($phone_opening_hours); ?></p>
-            <button>
-                <a href="tel:<?php echo esc_html($ticket_sale_phonenumber); ?>" class="buy-tickets-button">
-                    Call Now
-                </a>
-            </button>
+            <p><?php echo esc_html($ticket_sale_phonenumber); ?></p>
+                    
+               
+            
         </div>
         
     </section>
@@ -75,20 +74,8 @@ $question = get_field('question');
             <p><?php echo esc_html($competition_question); ?></p>
             <!-- <?php echo do_shortcode('[contact-form-7 id="ee6a125" title="Contact form 1"]') ?> -->
             <?php echo do_shortcode('[contact-form-7 id="697d9dd" title="Competition"]') ?>
-
-            <!-- <form id="competition-form">
-                <input class="qinput" type="text" name="answer" placeholder="Your Answer" required>
-                <div class="item button-parrot">
-                    <button class="clickmebtn" type="submit">Submit
-                        <div class="parrot"></div>
-                        <div class="parrot"></div>
-                        <div class="parrot"></div>
-                        <div class="parrot"></div>
-                        <div class="parrot"></div>
-                        <div class="parrot"></div>
-                    </button>
-                </div>
-            </form> -->
+                     
+          
         </div>
     </section>
 

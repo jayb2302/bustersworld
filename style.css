@@ -200,6 +200,7 @@ body{
     height: 300px;
     padding: 0 6%;
     font-family: 'dois', sans-serif;
+    z-index: 2;
 }
 .ticket-office p, .ticket-online p, .ticket-phone p{
    
@@ -262,8 +263,7 @@ button {
     transition: 0.2s ease-in-out;
     letter-spacing: 2px;
     margin-top: 50%;
-    top: -150%;
-    right: -200%;
+   
     z-index: 3;
     rotate: -45deg;
     
@@ -591,9 +591,8 @@ background-image: url("images/cardcloud.png");
     width: 100%;
     height: 600px;
     margin-top: -5%;
-    
-
 }
+
 .timer{
   width: 60%;
   display: flex;
@@ -601,14 +600,15 @@ background-image: url("images/cardcloud.png");
   margin-top: 10px;
 
 }
+
 .sub_timer{
   width: 220px;
-  
   background-color: rgb(255, 255, 255, 0.19);
   backdrop-filter: blur(20px);
   border-radius: 20px;
   overflow: hidden;
 }
+
 .digit{
   color: #fff;
   font-weight: lighter;
@@ -616,6 +616,7 @@ background-image: url("images/cardcloud.png");
   text-align: center;
   padding: 0.2rem 0;
 }
+
 .digit_name{
   color: #000;
   background-color: #fff;
