@@ -26,7 +26,7 @@ $question = get_field('question');
 ?>
 
 <section class="main-banner">
-    <div class="first-cloud"></div>
+    <!-- <div class="first-cloud"></div> -->
    
     <div class="front-container">
         <div class="play-title">
@@ -44,23 +44,32 @@ $question = get_field('question');
 
     <section class="ticket-section">
         <div class="ticket-office">
-            <h2><?php echo esc_html($ticket_office); ?></h2>
-            <p><?php echo esc_html($ticket_office_instructions); ?></p>
-            <p><?php echo esc_html($ticket_office_location); ?></p>
+            <h2><?php echo $ticket_office; ?></h2>
+            <p><?php echo $ticket_office_instructions; ?></p>
+            <p><?php echo $ticket_office_location; ?></p>
         </div>
         <div class="ticket-online">
             <h2><?php echo esc_html($online); ?></h2>
-            <button>
-                <a href="<?php echo esc_url($ticket_sale_link ); ?>" class="buy-tickets-button">
-                    Check availability
-                </a>
-            </button>
+                
+                <div class="item button-parrottwo">
+                    <button class="clickmebtntwo" type="submit">
+                    <a href="<?php echo esc_url($ticket_sale_link ); ?>" class="buy-tickets-button">
+                    Check Here
+                    </a>
+                        <div class="parrottwo"></div>
+                        <div class="parrottwo"></div>
+                        <div class="parrottwo"></div>
+                        <div class="parrottwo"></div>
+                        <div class="parrottwo"></div>
+                        <div class="parrottwo"></div>
+                    </button>
+                </div>
         </div>
         <div class="ticket-phone">
-            <h2><?php echo esc_html($by_phone); ?></h2>
-            <p><?php echo esc_html($phone_opening_hours); ?></p>
-            <p><?php echo esc_html($ticket_sale_phonenumber); ?></p>
-                    
+            <h2><?php echo $by_phone; ?></h2>
+            <p><?php echo $phone_opening_hours; ?></p>
+            <p><?php echo $ticket_sale_phonenumber; ?></p>
+                             
                
             
         </div>
@@ -80,26 +89,14 @@ $question = get_field('question');
             </div>
             <h2><?php echo esc_html($competition_heading); ?></h2>
             <p><?php echo esc_html($competition_question); ?></p>
+             <div class="form-wrapper">
+           
             <!-- <?php echo do_shortcode('[contact-form-7 id="ee6a125" title="Contact form 1"]') ?> -->
             <?php echo do_shortcode('[contact-form-7 id="697d9dd" title="Competition"]') ?>
-                     
-          
-            
-
-            <!-- <form id="competition-form">
-                <input class="qinput" type="text" name="answer" placeholder="Your Answer" required>
-                <div class="item button-parrot">
-                    <button class="clickmebtn" type="submit">Submit
-                        <div class="parrot"></div>
-                        <div class="parrot"></div>
-                        <div class="parrot"></div>
-                        <div class="parrot"></div>
-                        <div class="parrot"></div>
-                        <div class="parrot"></div>
-                    </button>
-                </div>
-            </form> -->
+             </div>
+           
         </div>
+      
     </section>
 
    
