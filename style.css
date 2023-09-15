@@ -3,783 +3,917 @@ Theme Name: Busters World
 Text Domain: bustersworld
 Author: Jonina, Yevhenii, Kian & Valeria
 */
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Dosis:wght@300&family=Mali:wght@700&family=Shadows+Into+Light&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Dosis:wght@300&family=Mali:wght@700&family=Shadows+Into+Light&display=swap");
 
 :root {
-    --background-color: #638EC7;
-    --border-color: #F27821;
-    --purple: #8869A8;
+  --background-color: #638ec7;
+  --border-color: #f27821;
+  --purple: #8869a8;
 }
 
 body {
-    background: radial-gradient(circle, rgba(99,142,199,1) 47%, rgba(158,185,220,1) 100%);
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 0;
-    margin: 0;
+  background: radial-gradient(
+    circle,
+    rgba(99, 142, 199, 1) 47%,
+    rgba(158, 185, 220, 1) 100%
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0;
+  margin: 0;
 }
 
 .first-cloud {
-    background-image: url("images/forth-cloud.png");
-    width: 100%;
-    height: 690px;
-    position: absolute;
-    background-repeat: no-repeat;
-    background-position: bottom ;
-    bottom: 5%;
-    z-index: -1;
-    margin: 0;
-    top: 35%;
-    opacity: 1;
+  background-image: url("images/forth-cloud.png");
+  width: 100%;
+  height: 690px;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  bottom: 5%;
+  z-index: -1;
+  margin: 0;
+  top: 35%;
+  opacity: 1;
 }
 .second-cloud {
-    background-repeat: no-repeat;
-    background-position: bottom ;
-    width: 100%;
-    height: 920px;
-    position: fixed;
-    bottom: -20%;
-    z-index: 1;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  width: 100%;
+  height: 920px;
+  position: fixed;
+  bottom: -20%;
+  z-index: 1;
 }
 .third-cloud {
-    background-image: url("images/third-cloud.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom 0%;
-    width: 100%;
-    height:600px;
-    position: fixed;
-    bottom: 0%;
-    z-index: -3;
+  background-image: url("images/third-cloud.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom 0%;
+  width: 100%;
+  height: 600px;
+  position: fixed;
+  bottom: 0%;
+  z-index: -3;
 }
-
-
 /*nav-bar*/
 #menu-wrapper {
-    position: relative;
-    z-index: 3;
-    color: #fff;
+  position: relative;
+  z-index: 3;
+  color: #fff;
 }
+
 
 .menu {
-    list-style: none;
-    font-family: 'Mali', cursive;
-    font-size: 1.3rem;
-   
+  list-style: none;
+  font-family: "Mali", cursive;
+  font-size: 1.3rem;
+  padding: 0;
+ 
+ 
 }
-.menu a{
-    text-decoration: none;
-    color: #fff;
+.menu a {
+  text-decoration: none;
+  color: #fff;
+  padding-left: 2%;
 }
 
-.menu a:hover{
-    color: #F27821;
+.menu a:hover {
+  color: #f27821;
 }
 #menu-icon {
-    cursor: pointer;
-    position: fixed;
-    right: 2%;  
+  cursor: pointer;
+  position: fixed;
+  right: 2%;
 }
 
 .main-navigation {
-    display: none; /* Hide the menu initially */
-    position: fixed;
-    list-style: none;
-    width: 250px;
-    background-image: url("images/cardcloud.png");
-    background-size: cover;
-    text-align: center;
-    padding-right: 4%;
-    padding-top: 2%; 
+  display: none; /* Hide the menu initially */
+  position: fixed;
+  list-style: none;
+  width: 300px;
+  background-image: url("images/dropdowncloud.png");
+  background-size: 330px 200px;
+  background-repeat: no-repeat;
+  background-position-y: 20%;
+  background-position-y: 90%;
+  height: 200px;
+  
+  
 }
+.menu-nav-menu-container {
+  width: 200px;
+  padding-top:10% ;
+  
+  margin: 0 auto;
+ 
+}
+.main-navigation ul {
+ display: flex;
+ justify-content: center;
+ flex-direction: column;
+
+}
+.main-navigation li {
+ text-align: center;
+ 
+  
+ }
 
 /* Style menu icon here */
 
 #menu-icon::before {
-    content: "\2630"; /* Unicode character for the 'hamburger' icon */
-    font-size: 36px;
+  content: "\2630"; /* Unicode character for the 'hamburger' icon */
+  font-size: 36px;
 }
 
 #menu-wrapper:hover .main-navigation {
-    display: block; /* Show the menu on hover */
-    right: 2%;
+  display: block; /* Show the menu on hover */
+  right: 2%;
 }
 /* Front Page */
 .front-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.front-container  {
-    width: 100%;
-    text-align: center;
+.front-container {
+  width: 100%;
+  text-align: center;
 }
 
 .play-title {
-    position: fixed;
-    top: 6%;
-    padding: 0 5%;
-    z-index: -2;
+  position: fixed;
+  top: 6%;
+  padding: 0 5%;
+  z-index: -2;
 }
 
 .play-title h1 {
-    font-family: 'Mali', cursive;
-    margin: auto;
-	letter-spacing: 0.0015em;
-    color: #103059;
-	font-size: 6em;
-	text-shadow: 0 1px #8da1ff, -1px 0 #c0cbff, -1px 2px #8da1ff, -2px 1px #c0cbff,
-		-2px 3px #8da1ff, -3px 2px #c0cbff, -3px 4px #8da1ff, -4px 3px #c0cbff,
-		-4px 5px #8da1ff, -5px 4px #c0cbff, -5px 6px #8da1ff, -6px 5px #c0cbff,
-		-6px 7px #8da1ff, -7px 6px #c0cbff, -7px 8px #8da1ff, -8px 7px #c0cbff;
-	text-align: center;
-    
-   
+  font-family: "Mali", cursive;
+  margin: auto;
+  letter-spacing: 0.0015em;
+  color: #103059;
+  font-size: 6em;
+  text-shadow: 0 1px #8869A8, -1px 0 #c0cbff, -1px 2px #8869A8, -2px 1px #c0cbff,
+    -2px 3px #8869A8, -3px 2px #c0cbff, -3px 4px #8869A8, -4px 3px #c0cbff,
+    -4px 5px #8869A8, -5px 4px #c0cbff, -5px 6px #8869A8, -6px 5px #c0cbff,
+    -6px 7px #8869A8, -7px 6px #c0cbff, -7px 8px #8869A8, -8px 7px #c0cbff;
+  text-align: center;
 }
 
 .play-summary {
-    margin-top: 10%;
-    width: 45%;
-   
-    
+  margin-top: 10%;
+  width: 45%;
 }
 
 .play-summary p {
-    font-family: 'Dosis', sans-serif;
-    font-size: 25px;
-    font-weight: 900;
- 
-    margin: 0;
-    padding: 0 5%;
-    text-align: center;
-    color: #ffffff;
-    z-index: -5;
-    padding-top: 2%;
-    
+  font-family: "Dosis", sans-serif;
+  font-size: 25px;
+  font-weight: 900;
+  margin: 0;
+  padding: 0 5%;
+  text-align: center;
+  color: #ffffff;
+  z-index: -5;
+  padding-top: 2%;
 }
 
 /*Section wrapper that displays competition */
 .section-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    width: 100%;
-    bottom: 5%;
-    height:600px;
-    background-image:url("images/forth-cloud.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  bottom: 5%;
+  height: 600px;
+  background-image: url("images/forth-cloud.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .competition {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: center;
-    padding: 0 5%;
-    margin-top: 12%;
-   
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  padding: 0 5%;
+  margin-top: 12%;
 }
-.eye-white{
-    width: 40px;
-    height: 40px;
-    margin: 25px;
-    border-radius: 50%;
-    position: relative;
-    top: 245px;
-    right: 3px;
-    display: inline-block;
-    overflow: hidden;
-    background: #fff;
+.eye-white {
+  width: 40px;
+  height: 40px;
+  margin: 25px;
+  border-radius: 50%;
+  position: relative;
+  top: 248px;
+  right: 3px;
+  display: inline-block;
+  overflow: hidden;
+  background: #fff;
 }
-  .eye-ball{
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    background:black;    
+.eye-ball {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: black;
 }
 .competition h2 {
-   
-    font-family: 'Mali', cursive;
-    font-size: 35px;
-    margin: 0;
-    margin-top: 10%;
-    text-shadow: #fbfbfb 0px 0px 10px,
-    #fbfbfb 0px 0px 20px;
-    
-   
+  font-family: "Mali", cursive;
+  font-size: 45px;
+  margin: 0;
+  margin-top: 10%;
+  color: #ffffff;
+  text-shadow: #fbfbfb 0px 0px 10px, #fbfbfb 0px 0px 20px;
+  text-shadow: 0 1px #8869A8, -1px 0 #c0cbff, -1px 2px #8869A8, -2px 1px #c0cbff,
+  -2px 3px #8869A8, -3px 2px #c0cbff, -3px 4px #8869A8, -4px 3px #c0cbff;
 }
 
 .competition-container p {
-    font-family: 'Mali', cursive;
-    padding: 0 15%;
-    text-align: center;
-    margin-bottom: 1%;
-    color: #000;
-    font-size: 18px;
-    text-shadow: #fbfbfb 0px 0px 10px,
-    #fbfbfb 0px 0px 20px;
-    text-transform: uppercase;
-    
+  font-family: "Mali", cursive;
+  padding: 0 15%;
+  text-align: center;
+  margin-bottom: 1%;
+  margin-top: -1%;
+  color: #000;
+  font-size: 18px;
+  text-shadow: #fbfbfb 0px 0px 10px, #fbfbfb 0px 0px 20px;
+  text-transform: uppercase;
 }
 
 .competition-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-image: url("images/Buster.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position-x: 50%;
-    bottom: 5%;
-    padding-top: 10%;
-    height: 400px;
-    width:500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("images/Buster.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: 50%;
+  bottom: 5%;
+  padding-top: 10%;
+  height: 400px;
+  width: 500px;
 }
 .ticket-section {
-    margin-top: 2%;
-    padding-top: 2%;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-   
-    justify-content: center;
-
-  
+  margin-top: 2%;
+  padding-top: 2%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
-.ticket-office , .ticket-online, .ticket-phone {
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    height: 300px;
-    padding: 0 1%;
-    font-family: 'Mali', cursive;
-    z-index: 2;
-    
+.ticket-office,
+.ticket-online,
+.ticket-phone {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 300px;
+  padding: 0 1%;
+  font-family: "Mali", cursive;
+  z-index: 2;
 }
-.ticket-office h2, .ticket-online h2, .ticket-phone h2{
-    color: #103059;
-	font-size: 2em;
-	text-shadow: 0 1px #8da1ff, -1px 0 #c0cbff, -1px 2px #8da1ff, -2px 1px #c0cbff,
-		-2px 3px #8da1ff, -3px 2px #c0cbff, -3px 4px #8da1ff, -4px 3px #c0cbff;
+.ticket-office h2,
+.ticket-online h2,
+.ticket-phone h2 {
+  color: #103059;
+  font-size: 2em;
+  text-shadow: 0 1px #8869A8, -1px 0 #c0cbff, -1px 2px #8869A8, -2px 1px #c0cbff,
+    -2px 3px #8869A8, -3px 2px #c0cbff, -3px 4px #8869A8, -4px 3px #c0cbff;
 }
 
-.ticket-office p, .ticket-online p, .ticket-phone p{
-   color: #000;
-    font-size: 20px;
-    font-family: 'Mali', cursive;
-    text-align: center;
-    margin: 1% 0  ;
- 
-    
+.ticket-office p,
+.ticket-online p,
+.ticket-phone p {
+  color: #000;
+  font-size: 20px;
+  font-family: "Mali", cursive;
+  text-align: center;
+  margin: 1% 0;
 }
 
 button {
-    background-color: #f9f9f9;
-    color: white;
-    height: 70px;
-    width: 200px;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    font-family: 'Dosis', sans-serif;
-    cursor: pointer;
-    border-radius: 90px;
-    margin-top: 5%;
-    margin-bottom: 10%;
-    transition: 0.2s ease-in-out;
-    background-image: url("images/cloudbtn.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    border: 1px solid #F27821;
-    font-family: 'Mali', cursive;
-    box-shadow: 0 0.4rem #F27821;
-    z-index: 10;
-    position: relative;
-   
-    
-    
+  background-color: #f9f9f9;
+  color: white;
+  height: 70px;
+  width: 200px;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Dosis", sans-serif;
+  cursor: pointer;
+  border-radius: 90px;
+  margin-top: 5%;
+  margin-bottom: 10%;
+  transition: 0.2s ease-in-out;
+  background-image: url("images/cloudbtn.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 1px solid #f27821;
+  font-family: "Mali", cursive;
+  box-shadow: 0 0.4rem #f27821;
+  z-index: 10;
+  position: relative;
 }
 
 button a {
-    text-decoration: none;
-    color: #8869A8;
-    font-size: 20px;
-    
+  text-decoration: none;
+  color: #8869a8;
+  font-size: 20px;
 }
 
-  
-  .button-parrottwo .parrottwo {
-    position: absolute;
-    width: 60px;
-    text-align: center;
-    animation: blink 0.8s infinite;
-    color: transparent;
-  }
-  
-  .button-parrottwo .parrottwo:before {
-    content: "Check Me!";
-  }
-  
-  .button-parrottwo .parrottwo:nth-child(1) {
-    top: -40px;
-    left: -70px;
-    font: 18px/1 'Mali', sans-serif;
-    transform: rotate(-50deg);
-    animation-duration: 0.8s;
-  }
-  
-  .button-parrottwo .parrottwo:nth-child(2) {
-    font: 18px/1 'Mali', sans-serif;
-    right: -60px;
-    top: -20px;
-    transform: rotate(15deg);
-    animation-duration: 0.6s;
-  }
-  
-  .button-parrottwo .parrottwo:nth-child(3) {
-    font: 18px/1 'Dosis', sans-serif;
-    top: 80px;
-    left: -50px;
-    transform: rotate(3-0deg);
-    animation-duration: 1s;
-  }
-  
-  .button-parrottwo .parrottwo:nth-child(4) {
-    font: 18px/1 'Mali ', sans-serif;
-    top: -40px;
-    left: 55px;
-    transform: rotate(2deg);
-    animation-duration: 0.7s;
-  }
-  
-  .button-parrottwo .parrot:nth-child(5) {
-    font: 18px/1 'Dosis', sans-serif;
-    top: -100px;
-    left: 90px;
-    transform: rotate(-20deg);
-    animation-duration: 0.8s;
-  }
-  
-  .button-parrottwo .parrot:nth-child(6) {
-    font: 15px/1 'Dosis', sans-serif;
-    top: -50px;
-    left: -145px;
-    transform: rotate(10deg);
-    animation-duration: 1.2s;
-  }
-  
-  .button-parrottwo button:hover .parrottwo:before {
-    content: "Do it!";
-    width: 70px;
-  }
+.button-parrottwo .parrottwo {
+  position: absolute;
+  width: 60px;
+  text-align: center;
+  animation: blink 0.8s infinite;
+  color: transparent;
+}
+
+.button-parrottwo .parrottwo:before {
+  content: "Check Me!";
+}
+
+.button-parrottwo .parrottwo:nth-child(2) {
+  top: -40px;
+  left: -50px;
+  font: 18px/1 "Mali", sans-serif;
+  transform: rotate(-40deg);
+  animation-duration: 0.8s;
+}
+
+.button-parrottwo .parrottwo:nth-child(6) {
+  font: 18px/1 "Mali", sans-serif;
+  right: -70px;
+  top: -30px;
+  transform: rotate(15deg);
+  animation-duration: 0.6s;
+}
+
+.button-parrottwo .parrottwo:nth-child(3) {
+  font: 18px/1 "Dosis", sans-serif;
+  top: 80px;
+  left: 70px;
+  transform: rotate(4deg);
+  animation-duration: 1s;
+}
+
+.button-parrottwo .parrottwo:nth-child(4) {
+  font: 18px/1 "Mali ", sans-serif;
+  top: -40px;
+  left: 190px;
+  transform: rotate(20deg);
+  animation-duration: 0.7s;
+}
+
+.button-parrottwo .parrot:nth-child(5) {
+  font: 18px/1 "Dosis", sans-serif;
+  top: -120px;
+  left: 90px;
+  transform: rotate(-20deg);
+  animation-duration: 0.8s;
+}
+
+.button-parrottwo .parrot:nth-child(6) {
+  font: 15px/1 "Dosis", sans-serif;
+  top: -150px;
+  left: -85px;
+  transform: rotate(10deg);
+  animation-duration: 1.2s;
+}
+
+.button-parrottwo button:hover .parrottwo:before {
+  content: "Do it!";
+  width: 70px;
+}
 /* Input */
 
 .qinput {
-    
-    border-radius: 50px;
-    padding: 0.5rem 1rem;
-    position: relative;
-    margin-top: 2%;
-    left: 18%;
-    z-index: 5;
-    background-color: #eee;
-    border: none;
-    color: #F27821;
-    box-shadow: 0 0.4rem #F27821;
-    cursor: pointer;
-    text-align: center;
-    
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
+  position: relative;
+  margin-top: 2%;
+  left: 18%;
+  z-index: 5;
+  background-color: #eee;
+  border: none;
+  color: #f27821;
+  box-shadow: 0 0.4rem #f27821;
+  cursor: pointer;
+  text-align: center;
 }
-
 
 .input-wrapper input:focus {
-    outline-color: #F27821;
-  }
+  outline-color: #f27821;
+}
 
-.wpcf7{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin-top: 25%;
-    margin-bottom: 5%;
-    
+.wpcf7 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 25%;
+  margin-bottom: 5%;
 }
 p #icon {
-   background-image: url("images/icons/phone.png");
-    width: 30px; /* Set the width of the icon */
-    height: 30px; /* Set the height of the icon */
-    background-size: cover; /* Adjust background image size as needed */
-    margin-right: 5px; /* Add some spacing between the icon and text */
+  background-image: url("images/icons/phone.png");
+  width: 30px; /* Set the width of the icon */
+  height: 30px; /* Set the height of the icon */
+  background-size: cover; /* Adjust background image size as needed */
+  margin-right: 5px; /* Add some spacing between the icon and text */
 }
 
 .wpcf7-not-valid-tip {
-    text-align: center;
-    z-index: 5;
+  text-align: center;
+  z-index: 5;
 }
 /* SubmitButton */
-
+.item button-parrot {
+  margin: 0 auto;
+}
 .clickmebtn {
-    background-color: #eee;
-    border: none;
-    color: #F27821;
-    box-shadow: 0 0.4rem #F27821;
-    color: var(--purple);
-    border: 2px solid var(--border-color);
-    border-radius: 50px;
-    padding: 0rem 0rem;
-    font-size: 13px;
-    font-family: 'Mali', cursive;
-    outline: none;
-    cursor: pointer;
-    position: relative;
-    transition: 0.2s ease-in-out;
-    letter-spacing: 2px;
-    z-index: 4;
-    left: 32%;
-    margin-top: 10%;
-    width: 150px;
-    height: 50px;
-   
-  }
-  
-  
-  .button-parrot .parrot {
-    position: absolute;
-    width: 60px;
-    text-align: center;
-    animation: blink 0.8s infinite;
+  background-color: #eee;
+  border: none;
+  color: #f27821;
+  box-shadow: 0 0.4rem #f27821;
+  color: var(--purple);
+  border: 2px solid var(--border-color);
+  border-radius: 50px;
+  padding: 0rem 0rem;
+  font-size: 13px;
+  font-family: "Mali", cursive;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  transition: 0.2s ease-in-out;
+  letter-spacing: 2px;
+  z-index: 4;
+  left: 35%;
+  margin-top: 10%;
+  width: 150px;
+  height: 50px;
+}
+
+.button-parrot .parrot {
+  position: absolute;
+  width: 60px;
+  text-align: center;
+  animation: blink 0.8s infinite;
+  color: transparent;
+}
+
+.button-parrot .parrot:before {
+  content: "Click Me!";
+}
+
+.button-parrot .parrot:nth-child(1) {
+  top: -30px;
+  left: -40px;
+  font-size: 13px;
+  font-family: "Dosis", sans-serif;
+  transform: rotate(-20deg);
+  animation-duration: 0.5s;
+}
+
+.button-parrot .parrot:nth-child(2) {
+  font: 12px/1 "Mali", sans-serif;
+  right: -40px;
+  top: -20px;
+  transform: rotate(15deg);
+  animation-duration: 0.4s;
+}
+
+.button-parrot .parrot:nth-child(3) {
+  font: 16px/1 "Margarine", sans-serif;
+  top: -60px;
+  left: 15px;
+  transform: rotate(10deg);
+  animation-duration: 1s;
+}
+
+.button-parrot .parrot:nth-child(4) {
+  font: 18px/1 "Margarine", sans-serif;
+  top: -70px;
+  left: 95px;
+  transform: rotate(2deg);
+  animation-duration: 0.7s;
+}
+
+.button-parrot .parrot:nth-child(5) {
+  font: 14px/1 "Mali", sans-serif;
+  top: 65px;
+  left: 55px;
+  transform: rotate(-20deg);
+  animation-duration: 0.8s;
+}
+
+.button-parrot .parrot:nth-child(6) {
+  font: 15px/1 "Dosis", sans-serif;
+  top: 70px;
+  left: -25px;
+  transform: rotate(10deg);
+  animation-duration: 1.2s;
+}
+
+.button-parrot button:hover .parrot:before {
+  content: "Do it!";
+  width: 70px;
+}
+
+@keyframes blink {
+  25%,
+  75% {
     color: transparent;
   }
-  
-  .button-parrot .parrot:before {
-    content: "Click Me!";
+
+  40%,
+  60% {
+    color: var(--purple);
   }
-  
-  .button-parrot .parrot:nth-child(1) {
-    top: -30px;
-    left: -40px;
-    font-size: 13px;
-    font-family: 'Dosis', sans-serif;
-    transform: rotate(-20deg);
-    animation-duration: 0.5s;
-  }
-  
-  .button-parrot .parrot:nth-child(2) {
-    font: 12px/1 'Mali', sans-serif;
-    right: -40px;
-    top: -20px;
-    transform: rotate(15deg);
-    animation-duration: 0.4s;
-  }
-  
-  .button-parrot .parrot:nth-child(3) {
-    font: 16px/1 "Margarine", sans-serif;
-    top: -60px;
-    left: 15px;
-    transform: rotate(10deg);
-    animation-duration: 1s;
-  }
-  
-  .button-parrot .parrot:nth-child(4) {
-    font: 18px/1 "Margarine", sans-serif;
-    top: -70px;
-    left: 95px;
-    transform: rotate(2deg);
-    animation-duration: 0.7s;
-  }
-  
-  .button-parrot .parrot:nth-child(5) {
-    font: 14px/1 'Mali', sans-serif;
-    top: 65px;
-    left: 55px;
-    transform: rotate(-20deg);
-    animation-duration: 0.8s;
-  }
-  
-  .button-parrot .parrot:nth-child(6) {
-    font: 15px/1 'Dosis', sans-serif;
-    top: 70px;
-    left: -25px;
-    transform: rotate(10deg);
-    animation-duration: 1.2s;
-  }
-  
-  .button-parrot button:hover .parrot:before {
-    content: "Do it!";
-    width: 70px;
-  }
-  
-  @keyframes blink {
-    25%, 75% {
-      color: transparent;
-    }
-  
-    40%, 60% {
-      color: var(--purple);
-    }
-  }
+}
 
 /* Directors Section*/
 .page-wrapper {
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.page-wrapper h1 {
+  font-family: "Mali", cursive;
+  font-size: 3em;
+  margin: 0;
+  text-shadow: 0 1px #8869A8, -1px 0 #c0cbff, -1px 2px #8869A8, -2px 1px #c0cbff,
+    -2px 3px #8869A8, -3px 2px #c0cbff, -3px 4px #8869A8, -4px 3px #c0cbff;  text-align: center;
+  color: #103059;
 }
 
 .directors-container {
-    /*width: 50%;*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction:column;
-    /*position: fixed;*/
-    
-    text-align: center;
+  /*width: 50%;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 15%;
+  margin-top: 2%;
+  text-align: center;
 }
 
 .directors-info {
-
   width: 100%;
-    letter-spacing: 0.1ch;
-    padding: 0 1%;
+  letter-spacing: 0.1ch;
+  padding: 0 1%;
+  
 }
 .directors-info h2 {
-    font-family: 'Mali', cursive;
-    font-size: 30px;
-    color: var(--purple);
-    padding-left:30%;
-   
-    padding-right: 0%;
-
+  font-family: 'Dosis', sans-serif;
+  margin: auto;
+  margin-top: -2%;
+  letter-spacing: 0.0015em;
+  color: #103059;
+  font-size: 3em;
+  line-height: 40px;
+  width: 50%;
+  
+  text-shadow: 0 1px #8869A8, -1px 0 #c0cbff, -1px 2px #8869A8, -2px 1px #c0cbff,
+    -2px 3px #8869A8, -3px 2px #c0cbff, -3px 4px #8869A8, -4px 3px #c0cbff;  text-align: center;
 }
 .directors-welcome p {
-    font-family: 'dois', sans-serif;
-    font-size: 18px;
-    padding: 0;
-    color: black;
-    text-align: center;
- padding-left: 20%;
-    padding-top: 10%;
-   
-    
+  font-family: 'Dosis', sans-serif;
+  font-size: 18px;
+  padding: 2rem;
+  color: black;
+  background-color: rgb(255, 255, 255, 0.19);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  text-align: center;
+  margin-left: 15%;
+  margin-right: 15%;
 }
-
 
 .directors-photo {
-    width: 200px; 
-    height: 200px; 
-    object-fit: cover;
-    border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
-    box-shadow:  -10px 10px 4px #8869A8;
-    background: #ffffff;
-    position: absolute;
-    top: 5%;
-    left: 5%;
-    border-radius: 50% 50%;
-    
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
+  box-shadow: 0 1px #8869A8, -1px 0 #c0cbff, -1px 2px #8869A8, -2px 1px #c0cbff,
+  -2px 3px #8869A8, -3px 2px #c0cbff, -3px 4px #8869A8, -4px 3px #c0cbff,
+  -4px 5px #8869A8, -5px 4px #c0cbff, -5px 6px #8869A8, -6px 5px #c0cbff,
+  -6px 7px #8869A8, -7px 6px #c0cbff, -7px 8px #8869A8, -8px 7px #c0cbff;
+  background: #ffffff;
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  border-radius: 25% 25%;
+  z-index: 1;
+}
+.review-sponsors{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}
+.review-section {
+  width: 30%;
+  height: 600px;
+  top: 10%;
+  font-family: "Dosis", sans-serif;
+  z-index: 2;
+  padding-bottom: 50px;
+  text-align: center;
+}
+.item-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10%;
+}
+.wpcr3_dotline{
+  display: none!important;
+}
+.sponsor-item {
+  margin: 5% 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 0;
+  width: 100px;
+}
+.sponsors-logo {
+  width: 100px;
+  padding-bottom: 2%;
+ 
+}
+.sponsors-section {
+  width: 55%;
+  padding-left: 5%;
+}
+.wpcr3_rating_stars{
+  text-align: center;
+  margin-left: -5%;
+}
+.wpcr3_respond_3 .wpcr3_button_1 .wpcr3_show_btn {
+  background-color: #000;
+}
+.wpcr3_button_1 {
+  background-image: url("images/cloudbtn.png");
+  background-size:200px auto;
+  background-repeat: no-repeat;
+  background-position-y:5% ;
+  border: 1px solid #f27821 !important;
+  height: auto;
+  background-color: #f9f9f9;
+  width: 180px;
+  padding: 2% 0;
+  font-family: 'Mali', cursive;
+  border-radius: 90px;
+  color: #8869a8;
+  box-shadow: 0 0.4rem #f27821;
+  
+ 
 }
 
-.review-section {
-    /*width: 50%;*/
-    /*position: fixed;*/
-    right: 0;
-    top: 10%;
-    background-color: #638EC7;
-    font-family: 'Dosis', sans-serif;
-    z-index: 2;
-    padding-bottom: 50px;
-    
+.wpcr3_button_1:hover {
+  background-image: url("images/cloudbtn.png");
+  background-size:200px auto;
+  background-repeat: no-repeat;
+  background-position-y:5% ;
+  border: 1px solid #f27821 !important;
+  height: auto;
+  background-color: #f9f9f9;
+  width: 180px;
+  padding: 2% 0;
+  font-family: 'Mali', cursive;
+  border-radius: 90px;
+  color: #8869a8;
+  box-shadow: 0 0.4rem #f27821;
 }
-.wpcr3_respond_3 .wpcr3_button_1 .wpcr3_show_btn{
-    background-color: #000;
-}
-.wpcr3_button_1  {
-background-image: url("images/cardcloud.png");  
-    border: 0px solid #F27821!important;
-}
-.wpcr3_button_1:hover  {
-    background-image: url("images/cardcloud.png");  
-        border: 1px solid #F27821!important;
-    }
-    
 
 .wpcr3_respond_1 {
   
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-   
-    left: 10%;
+  color: #f9f9f9;
+  position: relative;
 }
-.wpcr3_in_content p{
-    color: #ffffff;
-   
+.wpcr3_respond_1 input {
+  background-color: transparent;
+  position: relative;
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
+  position: relative;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  z-index: 5;
+  background-color: #eee;
+  border: none;
+  color: #f27821;
+  
+  cursor: pointer;
+  text-align: center;
+  width: 250px;
+  
+}
+#id_wpcr3_ftext{
+  position: relative;
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
+  position: relative;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  z-index: 5;
+  background-color: #eee;
+  border: none;
+  color: #f27821;
+  box-shadow: 0 0.4rem #f27821;
+  cursor: pointer;
+  text-align: center;
+  
+}
+.wpcr3_respond_2 textarea {
+min-width: 100px;
+max-width: 350PX;
+}
+.wpcr3_in_content p {
+  color: #ffffff;
 }
 
 .wpcr3_reviews_holder {
-    color: #ffffff;
-    position: relative;
-    width: 100%;
-    
-
+  position: fixed;
+  top: 15%;
+  right: 2%;
+  color: #ffffff;
+  overflow: auto;
+  height: 450px;
+  width: 300px;
+  font-family: 'Dosis', sans-serif;
+  font-size: 20px;
+  
+ 
 }
 
 /* Actors List */
 .actor-photo {
-    width: 160px; 
-    height: 160px; 
-    object-fit: cover;
-    position: absolute;
-    right:   10%;
-    top: -45%;
-    border-radius: 2% 6% 5% 4% / 1% 1% 2% 4%;
-    box-shadow:  -5px 5px 4px #F27821;
-    letter-spacing: 0.3ch;
-    background: #ffffff;
-    border-radius: 50% 50%;
-    z-index: -1;
-   
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  position: absolute;
+  right: 10%;
+  top: -55%;
+  box-shadow: 0 1px #8869A8, -1px 0 #c0cbff, -1px 2px #8869A8, -2px 1px #c0cbff,
+  -2px 3px #8869A8, -3px 2px #c0cbff, -3px 4px #8869A8, -4px 3px #c0cbff,
+  -4px 5px #8869A8, -5px 4px #c0cbff, -5px 6px #8869A8, -6px 5px #c0cbff,
+  -6px 7px #8869A8, -7px 6px #c0cbff, -7px 8px #8869A8, -8px 7px #c0cbff;
+  background: #ffffff;
+  letter-spacing: 0.3ch;
+ 
+  border-radius: 25% 25%;
+  z-index: -1;
 }
 
 
-.horizontal-scroll h2 {
-    color: #ffffff;
-    font-family: 'Mali', cursive;
-}
 
 .line {
-    height: 85px;
+  height: 85px;
 }
 
-.actor-item h2 {
-    font-family: 'Mali', cursive;
-    font-size: 30px;
-    text-align: center;
-    margin: 0;
-    padding: 1%;
-    position: absolute;
-    
-   
-}
-.actor-item h3 {
-    font-family: 'Mali', cursive;
-    font-size: 18px;
-    margin: 0;
-    margin-top: 1%;
-    padding-bottom: 2%;
-    color: var(--purple);
-    text-align: center;
-   
-    
-}
 
 .actor-item h4 {
-    font-family: 'Mali', cursive;
-    font-size: 25px;
-    padding-top: 10%;
-    padding: 0;
-    margin-top: 10%;
-    margin-bottom: 0;
-    color: var(--purple);
-    text-align: center;
-    
+  font-family: "Mali", cursive;
+  font-size: 1.2rem;
+  margin: 0;
+  margin-top: 2%;
+ 
+  color: var(--purple);
+  text-align: center;
+}
+
+.actor-item h3 {
+  font-family: "Mali", cursive;
+  font-size: 25px;
+  margin: 0;
+  margin-top: 10%;
+  
+  color: #103059;
+  text-shadow: 0 1px #8869A8, -1px 0 #c0cbff, -1px 2px #8869A8, -2px 1px #c0cbff,
+    -2px 3px #8869A8, -3px 2px #c0cbff, -3px 4px #8869A8, -4px 3px #c0cbff;  text-align: center;
 }
 
 .actor-item p {
-    font-family: 'Dosis', sans-serif;
-    font-size: 16px;
-    margin: 0;
-    padding-left: 10%;
-    padding-right: 10%;
-    text-align: center;
-    white-space: pre-line  ;
+  font-family: "Dosis", sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding-left: 10%;
+  padding-right: 10%;
+  text-align: center;
+  white-space: pre-line;
+
 }
 
-.actors-wrapper{
-    position: relative;
-    height: 400px;
-    /*width: 100%;*/
-  
+.actors-wrapper {
+  position: relative;
+  height: 400px;
+  margin-top: -15%;
+  width: 100%;
+ 
 }
 .actors-scroll-container {
-    overflow-x: auto; 
-    white-space: nowrap; 
-    padding: 0 0; 
-    position:absolute;
-    bottom: 0%;
-    width: 100%;
+  overflow-x: auto;
+  overflow-y:hidden;
+  white-space: nowrap;
+  padding: 0 0;
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  height: 240px;
 }
-
 
 .actors-container {
-    display: inline-block;
-    margin: 0 ;
-    margin-left: 1%;
-    max-width: 25%;
-    height: 230px;  
-    margin-top: 2%;  
-    letter-spacing: 0.3ch;
-    position: relative; 
-    background-image: url("images/cardcloud.png"); ;
-    background-position-y: 0%;
-    background-size: contain;
-    background-repeat: no-repeat;
-   
+  display: inline-block;
+  margin: 0;
+  height:150px;
+  letter-spacing: 0.3ch;
+  position: relative;
+ z-index: 10;
+
+}
+/* Style the container that holds the horizontal scrollbar */
+.horizontal-scroll {
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent wrapping of child elements */
+  overflow-y:hidden;
 }
 
+/* Style the scrollbar track */
+.horizontal-scroll::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar track */
+}
 
+/* Style the scrollbar thumb */
+.horizontal-scroll::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the scrollbar thumb */
+  border-radius: 5px; /* Round the edges of the thumb */
+}
+
+/* Style the scrollbar track on Firefox */
+.horizontal-scroll {
+  scrollbar-width: thin; /* Width of the scrollbar track */
+  scrollbar-color: #888 transparent; /* Color of the thumb and track */
+}
 .actor-item {
-    white-space: nowrap; 
-    vertical-align: bottom; 
-   
+  white-space: nowrap;
+  vertical-align: bottom;
+  min-width: 300px;
+  background-image: url("images/cardcloud.png");
+  background-position-y: 0%;
+  background-size: 300px 120px;
+  height: 100%;
+  margin: 0;
+  margin-top: 5%;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
 }
-
-
-
 
 /* Reviews Section */
 .wpcr3_respond_1 {
-    font-family: 'Dosis', sans-serif; }
-/* countdown-timer */
-#countdown-timer{
-    z-index: 1;
-    position: relative;
+  font-family: "Dosis", sans-serif;
 }
-.countdown-wrapper{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    height: 600px;
-    margin-top: -8%;
+/* countdown-timer */
+#countdown-timer {
+  z-index: 1;
+  position: relative;
+}
+.countdown-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 600px;
+  margin-top: -8%;
 }
 
-.timer{
+.timer {
   width: 60%;
   display: flex;
   justify-content: space-between;
-
-
 }
 
-.sub_timer{
+.sub_timer {
   width: 260px;
   background-color: rgb(255, 255, 255, 0.19);
   backdrop-filter: blur(20px);
@@ -788,34 +922,34 @@ background-image: url("images/cardcloud.png");
   height: 250px;
 }
 
-.digit{
+.digit {
   color: #fff;
   font-weight: lighter;
   font-size: 65px;
   text-align: center;
-  font-family: 'mali', sans-serif;
+  font-family: "mali", sans-serif;
 }
 
-.digit_name{
+.digit_name {
   color: #000;
   background-color: #8969a871;
   text-align: center;
   padding: 6% 0;
   font-size: 20px;
-  font-family: 'Dosis', sans-serif;
+  font-family: "Dosis", sans-serif;
 }
 
-footer{
+footer {
   z-index: 2;
   position: fixed;
   bottom: 0;
   width: 100%;
   background-image: url("images/second-cloud.png");
   background-size: cover;
-  height:180px;
+  height: 180px;
   background-position-y: 50%;
 }
-.footer-wrapper{
+.footer-wrapper {
   display: flex;
   justify-content: space-between;
   bottom: 0;
@@ -823,17 +957,16 @@ footer{
   padding: 0 10%;
   z-index: 2;
   width: 80%;
-  
 }
-p{
+p {
   font-size: medium;
   color: var(--purple);
 }
-.some{
+.some {
   display: flex;
   align-items: center;
 }
-.instagram{
+.instagram {
   background-image: url("images/icons/instagram.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -841,30 +974,126 @@ p{
   height: 30px;
   margin: 0 10px;
 }
-.facebook{
+.facebook {
   background-image: url("images/icons/facebook.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 30px;
   height: 30px;
   margin: 0 10px;
+}
+
+.web {
+  background-image: url("images/icons/website.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  margin: 2% 0px;
+ 
 
 }
-.email{
+.email {
   background-image: url("images/icons/email.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 36px;
   height: 28px;
   margin: 0 10px;
-
 }
-.phone{
-  background-image: url("images/icons/phone.png");
+.location {
+  background-image: url("images/icons/location.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   width: 30px;
   height: 30px;
   margin: 0 10px;
+}
 
+@media screen and (max-width: 600px) {
+  .play-title h1 {
+    font-size: 5em;
+    margin-top: 10%;
+  }
+  .play-summary {
+    margin-top: 55%;
+    width: 95%;
+    margin-bottom: 10%;
+    text-shadow: #fbfbfb 0px 0px 20px, #fbfbfb 0px 0px 20px;
+  }
+  .play-summary p {
+    font-size: 1.4em;
+    height: 200px;
+    color: black;
+  }
+  .section-wrapper {
+    height: 940px;
+    background-image: url("images/mobile-cloud.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: -30%;
+    width: 100%;
+  }
+  .ticket-section {
+    flex-direction: column;
+  }
+  .ticket-office,
+  .ticket-online,
+  .ticket-phone {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 5%;
+  }
+  .ticket-office,
+  .ticket-online,
+  .ticket-phone h2 {
+    margin: 5px;
+  }
+  .ticket-online {
+    order: 1;
+  }
+  .ticket-office {
+    order: 2;
+  }
+  .ticket-phone {
+    order: 3;
+  }
+  .eye-white {
+    width: 30px;
+    height: 30px;
+    top: 275px;
+    margin: 15px;
+  }
+  .eye-ball {
+    width: 15px;
+    height: 15px;
+  }
+  .timer {
+    width: 90%;
+  }
+  .clickmebtn {
+    margin-bottom: 17%;
+  }
+  .countdown-wrapper {
+    margin-top: -20%;
+  }
+  .item button-parrot {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+  .timer {
+    width: 90%;
+  }
+  .eye-white {
+    width: 35px;
+    height: 35px;
+    top: 265px;
+    margin: 15px;
+  }
+  .eye-ball {
+    width: 17.5px;
+    height: 17.5px;
+  }
 }

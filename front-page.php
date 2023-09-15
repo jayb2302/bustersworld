@@ -58,9 +58,7 @@ $question = get_field('question');
                     </a>
                         <div class="parrottwo"></div>
                         <div class="parrottwo"></div>
-                        <div class="parrottwo"></div>
-                        <div class="parrottwo"></div>
-                        <div class="parrottwo"></div>
+                        
                         <div class="parrottwo"></div>
                     </button>
                 </div>
