@@ -7,19 +7,15 @@
         <p class="description" ><?php the_field('description'); ?></p>
          <h1>Hello</h1>
             <?php
-            while (have_posts()) :
+                while (have_posts()) :
                 the_post();
-
                 // echo do_shortcode('[contact-form-7 id="46f086e" title="MailList"]');
                 // // Display the page content
                 // the_content();
-
-            endwhile;
+                endwhile;
             ?>
-
         </main><!-- #main -->
     </div><!-- #primary -->
 </div><!-- #content -->
-
 
 <?php get_footer(); ?>

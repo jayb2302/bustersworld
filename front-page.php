@@ -26,18 +26,14 @@ $question = get_field('question');
 ?>
 
 <section class="main-banner">
-    <!-- <div class="first-cloud"></div> -->
-   
     <div class="front-container">
         <div class="play-title">
             <h1><?php echo esc_html($play_title); ?></h1>
         </div>
         <div class="play-summary">
-            <p><?php echo esc_html($play_summary); ?></p>
+            <p><?php echo ($play_summary); ?></p>
         </div>
-     
     </div>   
-    <!-- <div class="second-cloud"></div> -->
 </section>
 
 <div class="section-wrapper">
@@ -50,28 +46,22 @@ $question = get_field('question');
         </div>
         <div class="ticket-online">
             <h2><?php echo esc_html($online); ?></h2>
-                
-                <div class="item button-parrottwo">
-                    <button class="clickmebtntwo" type="submit">
-                    <a href="<?php echo esc_url($ticket_sale_link ); ?>" class="buy-tickets-button">
-                    Check Here
-                    </a>
-                        <div class="parrottwo"></div>
-                        <div class="parrottwo"></div>
-                        
-                        <div class="parrottwo"></div>
-                    </button>
-                </div>
+            <div class="item button-parrottwo">
+                <button class="clickmebtntwo" type="submit">
+                <a href="<?php echo esc_url($ticket_sale_link ); ?>" class="buy-tickets-button">
+                Check Here
+                </a>
+                <div class="parrottwo"></div>
+                <div class="parrottwo"></div>
+                <div class="parrottwo"></div>
+                </button>
+            </div>
         </div>
         <div class="ticket-phone">
             <h2><?php echo $by_phone; ?></h2>
             <p><?php echo $phone_opening_hours; ?></p>
             <p><?php echo $ticket_sale_phonenumber; ?></p>
-                             
-               
-            
         </div>
-        
     </section>
 </div>
  
@@ -87,24 +77,16 @@ $question = get_field('question');
             </div>
             <h2><?php echo esc_html($competition_heading); ?></h2>
             <p><?php echo esc_html($competition_question); ?></p>
-             <div class="form-wrapper">
-           
-            <!-- <?php echo do_shortcode('[contact-form-7 id="ee6a125" title="Contact form 1"]') ?> -->
-            <?php echo do_shortcode('[contact-form-7 id="697d9dd" title="Competition"]') ?>
-             </div>
-           
+            <div class="form-wrapper">
+                <!-- Yev <?php echo do_shortcode('[contact-form-7 id="ee6a125" title="Contact form 1"]') ?> -->
+                <?php echo do_shortcode('[contact-form-7 id="697d9dd" title="Competition"]') ?>
+            </div>
         </div>
-      
     </section>
-
-   
-
 </div>
-
 
 <div class="third-cloud">
     <div class="countdown-wrapper">
-
         <div class="timer">
             <div class="sub_timer">
                 <p class="digit_name">Days</p>
@@ -121,8 +103,6 @@ $question = get_field('question');
         </div>
     </div>
 </div>
-
-
 
 <section class="social-media-links">
     <div class="container">
