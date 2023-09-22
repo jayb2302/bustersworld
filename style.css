@@ -29,6 +29,9 @@ body {
   margin: 0;
 }
 
+ul {
+  list-style: none;
+}
 .first-cloud {
   background-image: url("images/forth-cloud.png");
   width: 100%;

@@ -51,3 +51,13 @@
     add_filter('wpcf7_autop_or_not', '__return_false');
     add_action('wp_enqueue_scripts', 'enqueue_eyes_script');
 
+    function plp_register_string() {
+        pll_register_string("Buster", "Check Here");
+        pll_register_string("Buster", "Days");
+        pll_register_string("Buster", "Hours");
+        pll_register_string("Buster", "Minutes");
+       
+    }
+    
+    add_action("init", "plp_register_string");
+

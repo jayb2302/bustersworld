@@ -49,7 +49,7 @@ $question = get_field('question');
             <div class="item button-parrottwo">
                 <button class="clickmebtntwo" type="submit">
                 <a href="<?php echo esc_url($ticket_sale_link ); ?>" class="buy-tickets-button">
-                Check Here
+                <?php pll_e("Check Here"); ?>
                 </a>
                 <div class="parrottwo"></div>
                 <div class="parrottwo"></div>
@@ -89,15 +89,15 @@ $question = get_field('question');
     <div class="countdown-wrapper">
         <div class="timer">
             <div class="sub_timer">
-                <p class="digit_name">Days</p>
+                <p class="digit_name"><?php pll_e("Days") ?></p>
                 <h1 id="day" class="digit">00</h1>
             </div>
             <div class="sub_timer">
-                <p class="digit_name">Hours</p>
+                <p class="digit_name"><?php pll_e("Hours") ?></p>
                 <h1 id="hour" class="digit">00</h1>
             </div>
             <div class="sub_timer">
-                <p class="digit_name">Minutes</p>
+                <p class="digit_name"><?php pll_e("Minutes") ?></p>
                 <h1 id="min" class="digit">00</h1>
             </div>
         </div>
